@@ -8,8 +8,129 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Force all content to be visible immediately */
+        * { opacity: 1 !important; visibility: visible !important; transform: none !important; }
+        
+        /* Chat toggle always visible */
+        .chat-toggle { 
+            position: fixed !important;
+            bottom: 2rem !important;
+            right: 2rem !important;
+            width: 60px !important;
+            height: 60px !important;
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+            border: none !important;
+            border-radius: 50% !important;
+            color: white !important;
+            font-size: 1.5rem !important;
+            cursor: pointer !important;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6) !important;
+            z-index: 999 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        
+        /* Hero slideshow */
+        .hero-slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+        
+        .slide.active {
+            opacity: 1;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 2;
+        }
+        
+        .hero-container {
+            position: relative;
+            z-index: 3;
+        }
+        
+        /* Service cards with backgrounds */
+        .service-card {
+            position: relative;
+            background-size: cover !important;
+            background-position: center !important;
+            border-radius: 1rem;
+            overflow: hidden;
+            min-height: 300px;
+        }
+        
+        .service-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
+        }
+        
+        .service-content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: white;
+        }
+        
+        /* Why choose us background */
+        .why-choose-us {
+            position: relative;
+            background-size: cover !important;
+            background-position: center !important;
+            background-attachment: fixed;
+        }
+        
+        .section-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        
+        .why-choose-grid {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .why-choose-content {
+            color: white;
+        }
+    </style>
 </head>
-<body class="dark-mode">
+<body class="dark-mode" style="opacity: 1 !important; visibility: visible !important;">
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -388,6 +509,64 @@
     </button>
     
     <!-- Scripts -->
+    <script>
+        // Immediate fixes
+        document.addEventListener('DOMContentLoaded', function() {
+            // Force all elements visible
+            document.body.style.opacity = '1';
+            document.body.style.visibility = 'visible';
+            
+            // Show chat button immediately
+            const chatToggle = document.getElementById('chatToggle');
+            if (chatToggle) {
+                chatToggle.style.display = 'flex';
+                chatToggle.style.opacity = '1';
+                chatToggle.style.visibility = 'visible';
+            }
+            
+            // Start slideshow
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
+            if (slides.length > 1) {
+                setInterval(() => {
+                    slides[currentSlide].classList.remove('active');
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                }, 5000);
+            }
+            
+            // Show chat after 2 seconds
+            setTimeout(() => {
+                const aiChat = document.getElementById('aiChat');
+                if (aiChat) {
+                    aiChat.classList.add('active');
+                    
+                    // Auto-minimize after 5 seconds
+                    setTimeout(() => {
+                        aiChat.classList.remove('active');
+                        const notification = chatToggle?.querySelector('.chat-notification');
+                        if (notification) {
+                            notification.style.display = 'flex';
+                        }
+                    }, 5000);
+                }
+            }, 2000);
+            
+            // Chat toggle functionality
+            if (chatToggle) {
+                chatToggle.addEventListener('click', () => {
+                    const aiChat = document.getElementById('aiChat');
+                    if (aiChat) {
+                        aiChat.classList.toggle('active');
+                        const notification = chatToggle.querySelector('.chat-notification');
+                        if (notification) {
+                            notification.style.display = aiChat.classList.contains('active') ? 'none' : 'flex';
+                        }
+                    }
+                });
+            }
+        });
+    </script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/ai-chat.js"></script>
 </body>
