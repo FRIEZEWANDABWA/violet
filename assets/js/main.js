@@ -42,21 +42,12 @@ class OzoneWebsite {
     }
 
     onDOMContentLoaded() {
-        // Initialize AOS (Animate On Scroll) if available
-        if (typeof AOS !== 'undefined') {
-            AOS.init({
-                duration: 800,
-                easing: 'ease-in-out',
-                once: true,
-                offset: 100
-            });
-        }
-
+        // Skip AOS initialization to prevent content hiding
         // Initialize particles
         this.initParticles();
         
-        // Show initial animations
-        this.showInitialAnimations();
+        // Ensure all content is visible
+        this.ensureContentVisible();
     }
 
     onWindowLoad() {
@@ -325,32 +316,27 @@ class OzoneWebsite {
         // Additional scroll-triggered animations can be added here
     }
 
-    showInitialAnimations() {
-        // Ensure all content is visible immediately
-        const allContent = document.querySelectorAll('.hero-content, .hero-visual, .service-card, .feature-item');
-        allContent.forEach(element => {
+    ensureContentVisible() {
+        // Force all content to be visible
+        const allElements = document.querySelectorAll('*');
+        allElements.forEach(element => {
             element.style.opacity = '1';
             element.style.transform = 'none';
             element.style.visibility = 'visible';
         });
         
-        // Only add animation classes to elements that will be animated on scroll
-        const elementsToAnimate = [
-            { selector: '.service-card', class: 'fade-in' },
-            { selector: '.feature-item', class: 'scale-in' }
-        ];
-
-        elementsToAnimate.forEach(({ selector, class: animationClass }) => {
-            const elements = document.querySelectorAll(selector);
-            elements.forEach((element, index) => {
-                // Only add animation class if element is not in viewport
-                const rect = element.getBoundingClientRect();
-                if (rect.top > window.innerHeight) {
-                    element.classList.add(animationClass);
-                    element.style.animationDelay = `${index * 0.1}s`;
-                }
-            });
-        });
+        // Ensure chatbox is visible
+        const chatToggle = document.getElementById('chatToggle');
+        const aiChat = document.getElementById('aiChat');
+        if (chatToggle) {
+            chatToggle.style.display = 'flex';
+            chatToggle.style.opacity = '1';
+            chatToggle.style.visibility = 'visible';
+        }
+        if (aiChat) {
+            aiChat.style.opacity = '1';
+            aiChat.style.visibility = 'visible';
+        }
     }
 
     // Counter Animations

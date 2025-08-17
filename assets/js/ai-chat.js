@@ -161,20 +161,26 @@ class AIChatAssistant {
     }
 
     showInitialPopup() {
-        // Show chat popup after 2 seconds for first-time visitors
+        // Ensure chatbox is visible immediately
+        const chatToggle = document.getElementById('chatToggle');
+        if (chatToggle) {
+            chatToggle.style.display = 'flex';
+            chatToggle.style.opacity = '1';
+            chatToggle.style.visibility = 'visible';
+        }
+        
+        // Show chat popup after 1 second
         setTimeout(() => {
-            if (!this.isOpen) {
-                this.showChat();
-                this.addBotMessage("👋 Hi! I'm your AI assistant. I can help you learn about our services, get contact information, or answer any questions you have about OZONE I.T SYSTEM.");
-                
-                // Auto-minimize after 5 seconds if no user interaction
-                this.autoCloseTimer = setTimeout(() => {
-                    if (!this.hasUserInteracted()) {
-                        this.minimizeChat();
-                    }
-                }, 5000);
-            }
-        }, 2000);
+            this.showChat();
+            this.addBotMessage("👋 Hi! I'm your AI assistant. I can help you learn about our services, get contact information, or answer any questions you have about OZONE I.T SYSTEM.");
+            
+            // Auto-minimize after 5 seconds if no user interaction
+            this.autoCloseTimer = setTimeout(() => {
+                if (!this.hasUserInteracted()) {
+                    this.minimizeChat();
+                }
+            }, 5000);
+        }, 1000);
     }
 
     toggleChat() {

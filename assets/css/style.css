@@ -1388,13 +1388,22 @@ body {
     }
 }
 
-/* Ensure content is visible by default */
-.hero-content,
-.hero-visual,
-.service-card,
-.feature-item {
+/* Force all content to be visible */
+* {
     opacity: 1 !important;
     transform: none !important;
+    visibility: visible !important;
+}
+
+/* Ensure chatbox is always visible */
+.chat-toggle {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.ai-chat {
+    opacity: 1 !important;
     visibility: visible !important;
 }
 
