@@ -5,67 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OZONE I.T SYSTEM LTD - Professional ICT Solutions & Security Systems</title>
     <meta name="description" content="Leading provider of networking solutions, ICT supply, PBX systems, security systems, and fiber installations in Kenya">
-    <meta name="keywords" content="IT solutions, networking, security systems, PBX, IPBX, fiber optic, Kenya, Nairobi">
-    <meta name="author" content="OZONE I.T SYSTEM LTD">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="OZONE I.T SYSTEM LTD - Professional ICT Solutions">
-    <meta property="og:description" content="Leading provider of networking solutions, ICT supply, PBX systems, security systems, and fiber installations in Kenya">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ozoneitsystem.netlify.app">
-    <meta property="og:image" content="./pics/pexels-divinetechygirl-1181354.webp">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="OZONE I.T SYSTEM LTD - Professional ICT Solutions">
-    <meta name="twitter:description" content="Leading provider of networking solutions, ICT supply, PBX systems, security systems, and fiber installations in Kenya">
-    <meta name="twitter:image" content="./pics/pexels-divinetechygirl-1181354.webp">
-    
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "OZONE I.T SYSTEM LTD",
-        "description": "Professional I.T solutions, networking and security systems provider in Kenya",
-        "url": "https://ozoneitsystem.netlify.app",
-        "logo": "./pics/pexels-divinetechygirl-1181354.webp",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+254-700-000-000",
-            "contactType": "customer service",
-            "areaServed": "KE",
-            "availableLanguage": "English"
-        },
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Nairobi",
-            "addressCountry": "KE"
-        },
-        "sameAs": [
-            "https://facebook.com/ozoneitsystem",
-            "https://twitter.com/ozoneitsystem",
-            "https://linkedin.com/company/ozoneitsystem"
-        ]
-    }
-    </script>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./pics/pexels-divinetechygirl-1181354.webp">
-    
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="./pics/pexels-divinetechygirl-1181354.webp" as="image">
-    <link rel="preload" href="./assets/css/style.css" as="style">
 </head>
 <body class="dark-mode">
-    <!-- Progress Bar -->
-    <div class="progress-bar" id="progressBar"></div>
-    
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -106,11 +50,8 @@
             </div>
             
             <div class="nav-controls">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <button class="theme-toggle" id="themeToggle">
                     <i class="fas fa-sun"></i>
-                </button>
-                <button class="search-toggle" id="searchToggle" aria-label="Search">
-                    <i class="fas fa-search"></i>
                 </button>
                 <div class="nav-toggle" id="navToggle">
                     <span class="bar"></span>
@@ -119,31 +60,23 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Search Bar -->
-        <div class="search-bar" id="searchBar">
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search our services, solutions..." autocomplete="off">
-                <button class="voice-search" id="voiceSearch" aria-label="Voice search">
-                    <i class="fas fa-microphone"></i>
-                </button>
-                <div class="search-results" id="searchResults"></div>
-            </div>
-        </div>
     </nav>
     
-    <!-- Hero Section -->
+    <!-- Hero Section with Background Slideshow -->
     <section class="hero" id="hero">
-        <div class="hero-background">
-            <div class="particles" id="particles"></div>
-            <div class="gradient-overlay"></div>
+        <div class="hero-slideshow">
+            <div class="slide active" style="background-image: url('./pics/pexels-divinetechygirl-1181354.webp')"></div>
+            <div class="slide" style="background-image: url('./pics/alex-knight-2EJCSULRwC8-unsplash (1).webp')"></div>
+            <div class="slide" style="background-image: url('./pics/christopher-gower-m_HRfLhgABo-unsplash (1).webp')"></div>
+            <div class="slide" style="background-image: url('./pics/network-operator-upgrading-script-combining-html-code-with-it-language.jpg')"></div>
         </div>
+        <div class="hero-overlay"></div>
         
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
                     <i class="fas fa-award"></i>
-                    <span>Leading IT Solutions Provider</span>
+                    <span>Leading IT Solutions Provider in Kenya</span>
                 </div>
                 
                 <h1 class="hero-title">
@@ -153,20 +86,20 @@
                 
                 <p class="hero-subtitle">
                     We plan, enable and support proactive I.T services, networking and security solutions. 
-                    Our expert tech team handles all your I.T requirements with cutting-edge technology and AI-powered innovations.
+                    Our expert tech team handles all your I.T requirements with cutting-edge technology.
                 </p>
                 
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <div class="stat-number" data-count="500">0</div>
+                        <div class="stat-number">500+</div>
                         <div class="stat-label">Projects Completed</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number" data-count="50">0</div>
+                        <div class="stat-number">50+</div>
                         <div class="stat-label">Happy Clients</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number" data-count="10">0</div>
+                        <div class="stat-number">10+</div>
                         <div class="stat-label">Years Experience</div>
                     </div>
                 </div>
@@ -182,102 +115,97 @@
                     </a>
                 </div>
             </div>
-            
-            <div class="hero-visual">
-                <div class="tech-showcase">
-                    <div class="tech-card">
-                        <div class="tech-icon">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <h3>Networking</h3>
-                        <p>Advanced network infrastructure</p>
-                    </div>
-                    
-                    <div class="tech-card">
-                        <div class="tech-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Security</h3>
-                        <p>Comprehensive security systems</p>
-                    </div>
-                    
-                    <div class="tech-card">
-                        <div class="tech-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <h3>PBX Systems</h3>
-                        <p>Modern communication solutions</p>
-                    </div>
-                    
-                    <div class="tech-card">
-                        <div class="tech-icon">
-                            <i class="fas fa-video"></i>
-                        </div>
-                        <h3>Audio Visual</h3>
-                        <p>Professional AV systems</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="scroll-indicator">
-            <div class="scroll-arrow">
-                <i class="fas fa-chevron-down"></i>
-            </div>
         </div>
     </section>
     
-    <!-- Services Preview -->
-    <section class="services-preview" id="servicesPreview">
+    <!-- Our Services Section -->
+    <section class="services-section" id="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Our Expertise</span>
-                <h2>Comprehensive IT Solutions</h2>
-                <p>From networking to security, we provide end-to-end technology solutions</p>
+                <span class="section-badge">Our Services</span>
+                <h2>Complete IT Solutions for Your Business</h2>
+                <p>From networking to security, we provide comprehensive technology solutions</p>
             </div>
             
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-network-wired"></i>
+                <div class="service-card" style="background-image: url('./pics/pexels-pixabay-60504.jpg')">
+                    <div class="service-overlay"></div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Networking Solutions</h3>
+                        <p>Complete network infrastructure design, installation, and maintenance including LAN/WAN setup and wireless networks.</p>
+                        <a href="services.html#networking" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <h3>Networking Solutions</h3>
-                    <p>Complete network infrastructure design and implementation</p>
-                    <a href="services.html#networking" class="service-link">
-                        <span>Learn More</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
+                <div class="service-card" style="background-image: url('./pics/pexels-pixabay-373543 (1).jpg')">
+                    <div class="service-overlay"></div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Security Systems</h3>
+                        <p>Advanced security solutions including CCTV cameras, access control systems, and intruder alarm systems.</p>
+                        <a href="services.html#security" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <h3>Security Systems</h3>
-                    <p>Advanced security solutions for complete protection</p>
-                    <a href="services.html#security" class="service-link">
-                        <span>Learn More</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-phone-alt"></i>
+                <div class="service-card" style="background-image: url('./pics/pexels-brett-sayles-4497197.jpg')">
+                    <div class="service-overlay"></div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>PBX & IPBX Systems</h3>
+                        <p>Modern communication solutions with traditional PBX and advanced IP-based phone systems.</p>
+                        <a href="services.html#pbx" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <h3>PBX & IPBX</h3>
-                    <p>Modern communication systems for businesses</p>
-                    <a href="services.html#pbx" class="service-link">
-                        <span>Learn More</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
+                </div>
+                
+                <div class="service-card" style="background-image: url('./pics/pexels-mart-production-7251096.jpg')">
+                    <div class="service-overlay"></div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Audio Visual Systems</h3>
+                        <p>Professional AV solutions for conferences, presentations, and entertainment systems.</p>
+                        <a href="services.html#audiovisual" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card" style="background-image: url('./pics/pexels-ekaterinabelinskaya-4744711.jpg')">
+                    <div class="service-overlay"></div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>ICT Supply & Installation</h3>
+                        <p>End-to-end ICT solutions including hardware supply, software installation, and system integration.</p>
+                        <a href="services.html#ict" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-card" style="background-image: url('./pics/pexels-fotografiagmazg-7522609.jpg')">
+                    <div class="service-overlay"></div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h3>Fiber Links Installation</h3>
+                        <p>High-speed fiber optic network installation for reliable and fast data transmission.</p>
+                        <a href="services.html#fiber" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Why Choose Us -->
-    <section class="why-choose-us" id="whyChooseUs">
+    <section class="why-choose-us" style="background-image: url('./pics/pexels-mart-production-7252563.jpg')">
+        <div class="section-overlay"></div>
         <div class="container">
             <div class="why-choose-grid">
                 <div class="why-choose-content">
@@ -325,20 +253,15 @@
                 
                 <div class="why-choose-visual">
                     <div class="visual-card">
-                        <img src="./pics/pexels-divinetechygirl-1181354.webp" alt="Professional IT Team" loading="lazy">
-                        <div class="visual-overlay">
-                            <div class="play-button" id="playVideo">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
+                        <img src="./pics/focused-woman-testing-vr-headset.jpg" alt="Professional IT Team">
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Newsletter Signup -->
-    <section class="newsletter" id="newsletter">
+    <!-- Newsletter -->
+    <section class="newsletter">
         <div class="container">
             <div class="newsletter-content">
                 <div class="newsletter-text">
@@ -367,10 +290,10 @@
                     </div>
                     <p>Professional I.T solutions, networking and security systems. Transforming businesses with cutting-edge technology.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 
@@ -407,10 +330,6 @@
             
             <div class="footer-bottom">
                 <p>&copy; 2024 OZONE I.T SYSTEM LTD. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#privacy">Privacy Policy</a>
-                    <a href="#terms">Terms of Service</a>
-                </div>
             </div>
         </div>
     </footer>
@@ -448,30 +367,28 @@
         
         <div class="chat-input">
             <input type="text" id="chatInput" placeholder="Type your message...">
-            <button class="voice-input" id="voiceInput" aria-label="Voice input">
+            <button class="voice-input" id="voiceInput">
                 <i class="fas fa-microphone"></i>
             </button>
-            <button class="send-message" id="sendMessage" aria-label="Send message">
+            <button class="send-message" id="sendMessage">
                 <i class="fas fa-paper-plane"></i>
             </button>
         </div>
     </div>
     
     <!-- Chat Toggle Button -->
-    <button class="chat-toggle" id="chatToggle" aria-label="Open chat">
+    <button class="chat-toggle" id="chatToggle">
         <i class="fas fa-comments"></i>
         <span class="chat-notification">1</span>
     </button>
     
     <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <button class="back-to-top" id="backToTop">
         <i class="fas fa-chevron-up"></i>
     </button>
     
     <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/ai-chat.js"></script>
-    <script src="./assets/js/particles.js"></script>
 </body>
 </html>

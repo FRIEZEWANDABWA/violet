@@ -657,6 +657,43 @@
             text-align: center;
             border: 1px solid var(--border-color);
             transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .mission-card {
+            background-image: url('./pics/pexels-clement-proust-363898785-29283877.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .vision-card {
+            background-image: url('./pics/pexels-ron-lach-9144541.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .values-card {
+            background-image: url('./pics/3 (1).webp');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .mv-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+        
+        .mv-card > * {
+            position: relative;
+            z-index: 2;
+            color: white;
         }
         
         .mv-card:hover {
@@ -667,14 +704,15 @@
         .mv-icon {
             width: 80px;
             height: 80px;
-            background: var(--gradient-primary);
+            background: rgba(37, 99, 235, 0.9);
             border-radius: 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1.5rem;
-            color: var(--text-inverse);
+            color: white;
             font-size: 2rem;
+            backdrop-filter: blur(10px);
         }
         
         .company-timeline {
