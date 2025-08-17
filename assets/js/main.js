@@ -326,10 +326,16 @@ class OzoneWebsite {
     }
 
     showInitialAnimations() {
-        // Add initial animation classes to elements
+        // Ensure all content is visible immediately
+        const allContent = document.querySelectorAll('.hero-content, .hero-visual, .service-card, .feature-item');
+        allContent.forEach(element => {
+            element.style.opacity = '1';
+            element.style.transform = 'none';
+            element.style.visibility = 'visible';
+        });
+        
+        // Only add animation classes to elements that will be animated on scroll
         const elementsToAnimate = [
-            { selector: '.hero-content', class: 'slide-in-left' },
-            { selector: '.hero-visual', class: 'slide-in-right' },
             { selector: '.service-card', class: 'fade-in' },
             { selector: '.feature-item', class: 'scale-in' }
         ];
@@ -337,8 +343,12 @@ class OzoneWebsite {
         elementsToAnimate.forEach(({ selector, class: animationClass }) => {
             const elements = document.querySelectorAll(selector);
             elements.forEach((element, index) => {
-                element.classList.add(animationClass);
-                element.style.animationDelay = `${index * 0.1}s`;
+                // Only add animation class if element is not in viewport
+                const rect = element.getBoundingClientRect();
+                if (rect.top > window.innerHeight) {
+                    element.classList.add(animationClass);
+                    element.style.animationDelay = `${index * 0.1}s`;
+                }
             });
         });
     }

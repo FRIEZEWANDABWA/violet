@@ -69,14 +69,13 @@ class AIChatAssistant {
             }
         });
 
-        // Close chat when clicking outside
+        // Minimize chat when clicking outside (don't close completely)
         document.addEventListener('click', (e) => {
             const aiChat = document.getElementById('aiChat');
             const chatToggle = document.getElementById('chatToggle');
             
             if (this.isOpen && !e.target.closest('#aiChat') && !e.target.closest('#chatToggle')) {
-                // Don't auto-close, just minimize
-                // this.closeChat();
+                this.minimizeChat();
             }
         });
     }
@@ -162,22 +161,20 @@ class AIChatAssistant {
     }
 
     showInitialPopup() {
-        // Show chat popup after 3 seconds if user hasn't interacted
+        // Show chat popup after 2 seconds for first-time visitors
         setTimeout(() => {
-            if (!this.isOpen && !localStorage.getItem('chatShown')) {
+            if (!this.isOpen) {
                 this.showChat();
                 this.addBotMessage("👋 Hi! I'm your AI assistant. I can help you learn about our services, get contact information, or answer any questions you have about OZONE I.T SYSTEM.");
                 
-                // Auto-minimize after 5 seconds if no interaction
+                // Auto-minimize after 5 seconds if no user interaction
                 this.autoCloseTimer = setTimeout(() => {
                     if (!this.hasUserInteracted()) {
                         this.minimizeChat();
                     }
                 }, 5000);
-                
-                localStorage.setItem('chatShown', 'true');
             }
-        }, 3000);
+        }, 2000);
     }
 
     toggleChat() {
@@ -198,18 +195,20 @@ class AIChatAssistant {
             this.isOpen = true;
             this.isMinimized = false;
             
-            // Hide notification
+            // Hide notification badge
             if (notification) {
                 notification.style.display = 'none';
             }
             
-            // Focus on input
+            // Focus on input after animation
             const chatInput = document.getElementById('chatInput');
             if (chatInput) {
-                setTimeout(() => chatInput.focus(), 300);
+                setTimeout(() => {
+                    chatInput.focus();
+                }, 300);
             }
             
-            // Clear auto-close timer
+            // Clear any existing auto-close timers
             if (this.autoCloseTimer) {
                 clearTimeout(this.autoCloseTimer);
                 this.autoCloseTimer = null;
@@ -228,14 +227,26 @@ class AIChatAssistant {
     }
 
     minimizeChat() {
-        this.closeChat();
-        this.isMinimized = true;
+        const aiChat = document.getElementById('aiChat');
         
-        // Show notification badge
+        if (aiChat) {
+            aiChat.classList.remove('active');
+            this.isOpen = false;
+            this.isMinimized = true;
+        }
+        
+        // Show notification badge to indicate chat is available
         const chatToggle = document.getElementById('chatToggle');
         const notification = chatToggle?.querySelector('.chat-notification');
         if (notification) {
             notification.style.display = 'flex';
+            notification.textContent = '💬';
+        }
+        
+        // Clear any auto-close timers
+        if (this.autoCloseTimer) {
+            clearTimeout(this.autoCloseTimer);
+            this.autoCloseTimer = null;
         }
     }
 

@@ -1388,8 +1388,18 @@ body {
     }
 }
 
-/* Animation Classes */
-.fade-in {
+/* Ensure content is visible by default */
+.hero-content,
+.hero-visual,
+.service-card,
+.feature-item {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+/* Animation Classes - Only apply when specifically added */
+.fade-in:not(.visible) {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.6s ease;
@@ -1400,7 +1410,7 @@ body {
     transform: translateY(0);
 }
 
-.slide-in-left {
+.slide-in-left:not(.visible) {
     opacity: 0;
     transform: translateX(-50px);
     transition: all 0.6s ease;
@@ -1411,7 +1421,7 @@ body {
     transform: translateX(0);
 }
 
-.slide-in-right {
+.slide-in-right:not(.visible) {
     opacity: 0;
     transform: translateX(50px);
     transition: all 0.6s ease;
@@ -1422,7 +1432,7 @@ body {
     transform: translateX(0);
 }
 
-.scale-in {
+.scale-in:not(.visible) {
     opacity: 0;
     transform: scale(0.8);
     transition: all 0.6s ease;
