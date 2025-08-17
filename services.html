@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - OZONE I.T SYSTEM LTD | Comprehensive ICT Solutions</title>
+    <meta name="description" content="Explore our comprehensive I.T services including networking solutions, security systems, PBX systems, audio visual, and fiber installations">
+    <meta name="keywords" content="IT services, networking, security systems, PBX, IPBX, audio visual, fiber optic, Kenya">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Our Services - OZONE I.T SYSTEM LTD">
+    <meta property="og:description" content="Comprehensive I.T solutions including networking, security, PBX systems, and more">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ozoneitsystem.netlify.app/services.html">
+    <meta property="og:image" content="./pics/pexels-divinetechygirl-1181354.webp">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-network-wired"></i>
+                <span>OZONE I.T SYSTEM</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="about.html" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a>
+                <a href="services.html" class="nav-link active">
+                    <i class="fas fa-cogs"></i>
+                    <span>Services</span>
+                </a>
+                <a href="portfolio.html" class="nav-link">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Portfolio</span>
+                </a>
+                <a href="blog.html" class="nav-link">
+                    <i class="fas fa-blog"></i>
+                    <span>Blog</span>
+                </a>
+                <a href="gallery.html" class="nav-link">
+                    <i class="fas fa-images"></i>
+                    <span>Gallery</span>
+                </a>
+                <a href="contact.html" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="search-toggle" id="searchToggle" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="nav-toggle" id="navToggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-bar" id="searchBar">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search our services, solutions..." autocomplete="off">
+                <button class="voice-search" id="voiceSearch" aria-label="Voice search">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <section class="breadcrumbs">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="active">Services</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Services Hero -->
+    <section class="services-hero">
+        <div class="hero-background">
+            <div class="particles" id="servicesParticles"></div>
+            <div class="gradient-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="services-hero-content" data-aos="fade-up">
+                <span class="section-badge">Our Services</span>
+                <h1>Comprehensive I.T Solutions</h1>
+                <p>From networking infrastructure to advanced security systems, we provide end-to-end technology solutions that drive your business forward.</p>
+                
+                <div class="service-categories">
+                    <div class="category-item" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-network-wired"></i>
+                        <span>Networking</span>
+                    </div>
+                    <div class="category-item" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Security</span>
+                    </div>
+                    <div class="category-item" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>Communication</span>
+                    </div>
+                    <div class="category-item" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-video"></i>
+                        <span>Audio Visual</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Filter -->
+    <section class="service-filter">
+        <div class="container">
+            <div class="filter-tabs" data-aos="fade-up">
+                <button class="filter-tab active" data-filter="all">All Services</button>
+                <button class="filter-tab" data-filter="networking">Networking</button>
+                <button class="filter-tab" data-filter="security">Security</button>
+                <button class="filter-tab" data-filter="communication">Communication</button>
+                <button class="filter-tab" data-filter="audiovisual">Audio Visual</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Networking Solutions -->
+    <section class="service-section" id="networking" data-category="networking">
+        <div class="container">
+            <div class="service-header" data-aos="fade-up">
+                <div class="service-icon-large">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="service-header-content">
+                    <h2>Networking Solutions</h2>
+                    <p>Complete network infrastructure design, installation, and maintenance for optimal connectivity and performance</p>
+                </div>
+            </div>
+            
+            <div class="service-details-grid">
+                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="detail-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h4>Network Design & Planning</h4>
+                    <p>Strategic network architecture planning tailored to your business requirements and growth projections.</p>
+                    <ul class="feature-list">
+                        <li>Network topology design</li>
+                        <li>Capacity planning</li>
+                        <li>Scalability assessment</li>
+                        <li>Performance optimization</li>
+                    </ul>
+                </div>
+                
+                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="detail-icon">
+                        <i class="fas fa-ethernet"></i>
+                    </div>
+                    <h4>LAN/WAN Setup</h4>
+                    <p>Professional installation and configuration of local and wide area networks for seamless connectivity.</p>
+                    <ul class="feature-list">
+                        <li>Structured cabling</li>
+                        <li>Switch configuration</li>
+                        <li>Router setup</li>
+                        <li>VLAN implementation</li>
+                    </ul>
+                </div>
+                
+                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="detail-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h4>Wireless Networks</h4>
+                    <p>Enterprise-grade wireless solutions for reliable and secure wireless connectivity throughout your facility.</p>
+                    <ul class="feature-list">
+                        <li>Wi-Fi 6 implementation</li>
+                        <li>Coverage optimization</li>
+                        <li>Guest network setup</li>
+                        <li>Wireless security</li>
+                    </ul>
+                </div>
+                
+                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="detail-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Network Security</h4>
+                    <p>Comprehensive network security solutions to protect your data and infrastructure from threats.</p>
+                    <ul class="feature-list">
+                        <li>Firewall configuration</li>
+                        <li>VPN setup</li>
+                        <li>Intrusion detection</li>
+                        <li>Network monitoring</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="service-cta" data-aos="fade-up">
+                <h3>Ready to upgrade your network infrastructure?</h3>
+                <a href="contact.html" class="btn btn-primary">Get Network Assessment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Systems -->
+    <section class="service-section" id="security" data-category="security">
+        <div class="container">
+            <div class="service-header" data-aos="fade-up">
+                <div class="service-icon-large">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="service-header-content">
+                    <h2>Security Systems</h2>
+                    <p>Advanced security solutions including CCTV, access control, and alarm systems for complete protection</p>
+                </div>
+            </div>
+            
+            <div class="security-showcase" data-aos="fade-up">
+                <div class="security-visual">
+                    <img src="./pics/pexels-pixabay-60504.jpg" alt="Security Systems" loading="lazy">
+                    <div class="security-overlay">
+                        <div class="security-features">
+                            <div class="security-feature">
+                                <i class="fas fa-camera"></i>
+                                <span>CCTV Surveillance</span>
+                            </div>
+                            <div class="security-feature">
+                                <i class="fas fa-key"></i>
+                                <span>Access Control</span>
+                            </div>
+                            <div class="security-feature">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>Alarm Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-details-grid">
+                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="detail-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h4>CCTV Cameras</h4>
+                    <p>High-definition surveillance systems with remote monitoring capabilities and intelligent analytics.</p>
+                    <ul class="feature-list">
+                        <li>4K Ultra HD cameras</li>
+                        <li>Night vision technology</li>
+                        <li>Motion detection</li>
+                        <li>Remote viewing</li>
+                    </ul>
+                </div>
+                
+                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="detail-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h4>Access Control Systems</h4>
+                    <p>Sophisticated access control solutions for secure entry management and visitor tracking.</p>
+                    <ul class="feature-list">
+                        <li>Biometric scanners</li>
+                        <li>Card readers</li>
+                        <li>Time attendance</li>
+                        <li>Visitor management</li>
+                    </ul>
+                </div>
+                
+                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="detail-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h4>Intruder Alarm Systems</h4>
+                    <p>Comprehensive alarm systems with multiple detection methods and instant notification capabilities.</p>
+                    <ul class="feature-list">
+                        <li>Motion sensors</li>
+                        <li>Door/window sensors</li>
+                        <li>Glass break detectors</li>
+                        <li>Mobile alerts</li>
+                    </ul>
+                </div>
+                
+                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="detail-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h4>24/7 Monitoring</h4>
+                    <p>Professional monitoring services with immediate response to security events and incidents.</p>
+                    <ul class="feature-list">
+                        <li>Live monitoring</li>
+                        <li>Incident response</li>
+                        <li>Emergency dispatch</li>
+                        <li>Detailed reporting</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="service-cta" data-aos="fade-up">
+                <h3>Secure your premises with our advanced security solutions</h3>
+                <a href="contact.html" class="btn btn-primary">Schedule Security Assessment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PBX & IPBX Systems -->
+    <section class="service-section" id="pbx" data-category="communication">
+        <div class="container">
+            <div class="service-header" data-aos="fade-up">
+                <div class="service-icon-large">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="service-header-content">
+                    <h2>PBX & IPBX Systems</h2>
+                    <p>Modern communication solutions with traditional PBX and advanced IP-based phone systems</p>
+                </div>
+            </div>
+            
+            <div class="pbx-comparison" data-aos="fade-up">
+                <div class="comparison-card traditional-pbx">
+                    <h4>Traditional PBX</h4>
+                    <div class="comparison-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Reliable voice communication</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Proven technology</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Local control</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comparison-vs">
+                    <span>VS</span>
+                </div>
+                
+                <div class="comparison-card ip-pbx">
+                    <h4>IP PBX</h4>
+                    <div class="comparison-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>VoIP integration</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Advanced features</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Cost effective</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Scalable solution</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-details-grid">
+                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="detail-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h4>PBX Installation</h4>
+                    <p>Professional installation and configuration of traditional PBX systems for reliable voice communication.</p>
+                    <ul class="feature-list">
+                        <li>System design</li>
+                        <li>Hardware installation</li>
+                        <li>Line configuration</li>
+                        <li>User training</li>
+                    </ul>
+                </div>
+                
+                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="detail-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h4>IPBX Solutions</h4>
+                    <p>Advanced IP-based phone systems with modern features and integration capabilities.</p>
+                    <ul class="feature-list">
+                        <li>VoIP technology</li>
+                        <li>Unified communications</li>
+                        <li>Mobile integration</li>
+                        <li>Call analytics</li>
+                    </ul>
+                </div>
+                
+                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="detail-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4>Call Management</h4>
+                    <p>Comprehensive call management features for efficient communication and customer service.</p>
+                    <ul class="feature-list">
+                        <li>Call routing</li>
+                        <li>Auto attendant</li>
+                        <li>Call recording</li>
+                        <li>Queue management</li>
+                    </ul>
+                </div>
+                
+                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="detail-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h4>Maintenance & Support</h4>
+                    <p>Ongoing maintenance and technical support to ensure optimal system performance.</p>
+                    <ul class="feature-list">
+                        <li>Regular maintenance</li>
+                        <li>Software updates</li>
+                        <li>Technical support</li>
+                        <li>System monitoring</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="service-cta" data-aos="fade-up">
+                <h3>Upgrade your communication system today</h3>
+                <a href="contact.html" class="btn btn-primary">Request PBX Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audio Visual Systems -->
+    <section class="service-section" id="audiovisual" data-category="audiovisual">
+        <div class="container">
+            <div class="service-header" data-aos="fade-up">
+                <div class="service-icon-large">
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="service-header-content">
+                    <h2>Audio Visual Systems</h2>
+                    <p>Professional AV solutions for conferences, presentations, and entertainment systems</p>
+                </div>
+            </div>
+            
+            <div class="av-showcase" data-aos="fade-up">
+                <div class="av-grid">
+                    <div class="av-item">
+                        <img src="./pics/pexels-fotografiagmazg-7522609.jpg" alt="Conference Room AV" loading="lazy">
+                        <div class="av-overlay">
+                            <h4>Conference Rooms</h4>
+                            <p>Complete AV solutions for modern meeting spaces</p>
+                        </div>
+                    </div>
+                    <div class="av-item">
+                        <img src="./pics/pexels-brett-sayles-4497197.jpg" alt="Presentation Systems" loading="lazy">
+                        <div class="av-overlay">
+                            <h4>Presentation Systems</h4>
+                            <p>Interactive displays and projection solutions</p>
+                        </div>
+                    </div>
+                    <div class="av-item">
+                        <img src="./pics/pexels-pixabay-373543 (1).jpg" alt="Sound Systems" loading="lazy">
+                        <div class="av-overlay">
+                            <h4>Sound Systems</h4>
+                            <p>Professional audio solutions for any venue</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-details-grid">
+                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="detail-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Conference Systems</h4>
+                    <p>Complete conference room solutions with video conferencing and collaboration tools.</p>
+                    <ul class="feature-list">
+                        <li>Video conferencing</li>
+                        <li>Wireless presentation</li>
+                        <li>Room control systems</li>
+                        <li>Integration solutions</li>
+                    </ul>
+                </div>
+                
+                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="detail-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h4>Display Technologies</h4>
+                    <p>Advanced display solutions including LED walls, projectors, and interactive displays.</p>
+                    <ul class="feature-list">
+                        <li>LED video walls</li>
+                        <li>4K projectors</li>
+                        <li>Interactive displays</li>
+                        <li>Digital signage</li>
+                    </ul>
+                </div>
+                
+                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="detail-icon">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <h4>Sound Systems</h4>
+                    <p>Professional audio systems for clear communication and entertainment.</p>
+                    <ul class="feature-list">
+                        <li>PA systems</li>
+                        <li>Wireless microphones</li>
+                        <li>Audio mixing</li>
+                        <li>Background music</li>
+                    </ul>
+                </div>
+                
+                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="detail-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h4>Control & Automation</h4>
+                    <p>Intelligent control systems for seamless operation of all AV equipment.</p>
+                    <ul class="feature-list">
+                        <li>Touch panel control</li>
+                        <li>Automated systems</li>
+                        <li>Lighting integration</li>
+                        <li>Remote management</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="service-cta" data-aos="fade-up">
+                <h3>Transform your presentations and meetings</h3>
+                <a href="contact.html" class="btn btn-primary">Get AV Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="additional-services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Additional Services</span>
+                <h2>Complete I.T Solutions</h2>
+                <p>Beyond our core services, we offer comprehensive support and specialized solutions</p>
+            </div>
+            
+            <div class="additional-grid">
+                <div class="additional-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="additional-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h4>ICT Supply & Installation</h4>
+                    <p>Complete hardware and software procurement, installation, and integration services.</p>
+                    <a href="contact.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="additional-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="additional-icon">
+                        <i class="fas fa-ethernet"></i>
+                    </div>
+                    <h4>Fiber Links Installation</h4>
+                    <p>High-speed fiber optic network installation for reliable data transmission.</p>
+                    <a href="contact.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="additional-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="additional-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h4>Maintenance & Support</h4>
+                    <p>24/7 technical support and maintenance services for all our installations.</p>
+                    <a href="contact.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="additional-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="additional-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4>Training & Consultation</h4>
+                    <p>Professional training and consultation services for your technical team.</p>
+                    <a href="contact.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Process -->
+    <section class="service-process">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Our Process</span>
+                <h2>How We Work</h2>
+                <p>Our proven methodology ensures successful project delivery</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h4>Consultation</h4>
+                        <p>We analyze your requirements and provide expert recommendations</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h4>Design</h4>
+                        <p>Custom solution design tailored to your specific needs and budget</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h4>Implementation</h4>
+                        <p>Professional installation and configuration by certified technicians</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h4>Support</h4>
+                        <p>Ongoing maintenance and support to ensure optimal performance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="services-cta">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Ready to Get Started?</h2>
+                <p>Contact us today for a free consultation and quote for your I.T project</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-phone"></i>
+                        <span>Get Free Quote</span>
+                    </a>
+                    <a href="portfolio.html" class="btn btn-secondary">
+                        <i class="fas fa-eye"></i>
+                        <span>View Our Work</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-network-wired"></i>
+                        <span>OZONE I.T SYSTEM</span>
+                    </div>
+                    <p>Professional I.T solutions, networking and security systems. Transforming businesses with cutting-edge technology.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#networking">Networking</a></li>
+                        <li><a href="#security">Security Systems</a></li>
+                        <li><a href="#pbx">PBX Systems</a></li>
+                        <li><a href="#audiovisual">Audio Visual</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                        <p><i class="fas fa-phone"></i> +254 700 000 000</p>
+                        <p><i class="fas fa-envelope"></i> info@ozoneitsystem.co.ke</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 OZONE I.T SYSTEM LTD. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chat Assistant -->
+    <div class="ai-chat" id="aiChat">
+        <div class="chat-header">
+            <div class="chat-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="chat-info">
+                <h4>AI Assistant</h4>
+                <span class="chat-status">Online</span>
+            </div>
+            <button class="chat-minimize" id="chatMinimize">
+                <i class="fas fa-minus"></i>
+            </button>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>Hi! I can help you learn about our services. Which service interests you most?</p>
+                    <div class="quick-actions">
+                        <button class="quick-action" data-action="services">All Services</button>
+                        <button class="quick-action" data-action="contact">Get Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Ask about our services...">
+            <button class="voice-input" id="voiceInput" aria-label="Voice input">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <button class="send-message" id="sendMessage" aria-label="Send message">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle" id="chatToggle" aria-label="Open chat">
+        <i class="fas fa-comments"></i>
+        <span class="chat-notification">1</span>
+    </button>
+    
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/ai-chat.js"></script>
+    <script src="./assets/js/particles.js"></script>
+    
+    <!-- Services Page Specific Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Service filtering
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const serviceSections = document.querySelectorAll('.service-section');
+            
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+                    
+                    const filter = tab.dataset.filter;
+                    
+                    serviceSections.forEach(section => {
+                        if (filter === 'all' || section.dataset.category === filter) {
+                            section.style.display = 'block';
+                            // Re-trigger AOS animations
+                            section.querySelectorAll('[data-aos]').forEach(el => {
+                                el.classList.remove('aos-animate');
+                                setTimeout(() => el.classList.add('aos-animate'), 100);
+                            });
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Smooth scrolling for service navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    
+    <!-- Page-specific styles -->
+    <style>
+        .services-hero {
+            padding: 120px 0 80px;
+            background: var(--gradient-hero);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-categories {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .category-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all var(--transition-normal);
+        }
+        
+        .category-item:hover {
+            transform: translateY(-0.5rem);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .category-item i {
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+        
+        .category-item span {
+            color: var(--text-inverse);
+            font-weight: 500;
+        }
+        
+        .service-filter {
+            padding: 2rem 0;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .filter-tabs {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .filter-tab {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--border-color);
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border-radius: 2rem;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            font-weight: 500;
+        }
+        
+        .filter-tab:hover,
+        .filter-tab.active {
+            border-color: var(--primary-color);
+            background: var(--primary-color);
+            color: var(--text-inverse);
+        }
+        
+        .service-section {
+            padding: var(--section-padding);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .service-section:nth-child(even) {
+            background: var(--bg-secondary);
+        }
+        
+        .service-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .service-icon-large {
+            width: 100px;
+            height: 100px;
+            background: var(--gradient-primary);
+            border-radius: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-inverse);
+            font-size: 3rem;
+            flex-shrink: 0;
+        }
+        
+        .service-header-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .service-details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .service-detail-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            transition: all var(--transition-normal);
+        }
+        
+        .service-detail-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-color);
+        }
+        
+        .detail-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-secondary);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-inverse);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-detail-card h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .service-detail-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .feature-list {
+            list-style: none;
+        }
+        
+        .feature-list li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        .service-cta {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+        }
+        
+        .service-cta h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .security-showcase,
+        .av-showcase {
+            margin: 3rem 0;
+        }
+        
+        .security-visual {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+        
+        .security-visual img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        .security-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(37, 99, 235, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .security-features {
+            display: flex;
+            gap: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .security-feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            color: white;
+            text-align: center;
+        }
+        
+        .security-feature i {
+            font-size: 3rem;
+        }
+        
+        .security-feature span {
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+        
+        .pbx-comparison {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 2rem;
+            align-items: center;
+            margin: 3rem 0;
+        }
+        
+        .comparison-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+        
+        .comparison-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+        
+        .comparison-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .comparison-vs {
+            background: var(--primary-color);
+            color: var(--text-inverse);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        
+        .av-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .av-item {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+        
+        .av-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+        
+        .av-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .av-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .av-overlay h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .additional-services {
+            padding: var(--section-padding);
+            background: var(--bg-secondary);
+        }
+        
+        .additional-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .additional-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: all var(--transition-normal);
+        }
+        
+        .additional-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .additional-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-accent);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--text-inverse);
+            font-size: 2rem;
+        }
+        
+        .additional-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .additional-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .learn-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap var(--transition-normal);
+        }
+        
+        .learn-more:hover {
+            gap: 1rem;
+        }
+        
+        .service-process {
+            padding: var(--section-padding);
+            background: var(--bg-primary);
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 2rem;
+            background: var(--bg-card);
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            transition: all var(--transition-normal);
+        }
+        
+        .process-step:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-inverse);
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .step-content h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        .step-content p {
+            color: var(--text-secondary);
+        }
+        
+        .services-cta {
+            padding: var(--section-padding);
+            background: var(--gradient-primary);
+            text-align: center;
+        }
+        
+        .services-cta .cta-content h2 {
+            color: var(--text-inverse);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .services-cta .cta-content p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-buttons .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: var(--text-inverse);
+        }
+        
+        .cta-buttons .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .service-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .service-categories {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .pbx-comparison {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .comparison-vs {
+                order: 2;
+                margin: 0 auto;
+            }
+            
+            .security-features {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-step {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</body>
+</html>

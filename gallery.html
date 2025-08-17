@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - OZONE I.T SYSTEM LTD | Project Photos & Media</title>
+    <meta name="description" content="Explore our gallery of completed I.T projects, installations, and technology solutions across Kenya">
+    <meta name="keywords" content="IT gallery, project photos, installations, networking photos, security systems, Kenya">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-network-wired"></i>
+                <span>OZONE I.T SYSTEM</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="about.html" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a>
+                <a href="services.html" class="nav-link">
+                    <i class="fas fa-cogs"></i>
+                    <span>Services</span>
+                </a>
+                <a href="portfolio.html" class="nav-link">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Portfolio</span>
+                </a>
+                <a href="blog.html" class="nav-link">
+                    <i class="fas fa-blog"></i>
+                    <span>Blog</span>
+                </a>
+                <a href="gallery.html" class="nav-link active">
+                    <i class="fas fa-images"></i>
+                    <span>Gallery</span>
+                </a>
+                <a href="contact.html" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="search-toggle" id="searchToggle" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="nav-toggle" id="navToggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-bar" id="searchBar">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search gallery..." autocomplete="off">
+                <button class="voice-search" id="voiceSearch" aria-label="Voice search">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <section class="breadcrumbs">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="active">Gallery</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Gallery Hero -->
+    <section class="gallery-hero">
+        <div class="hero-background">
+            <div class="particles" id="galleryParticles"></div>
+            <div class="gradient-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="gallery-hero-content" data-aos="fade-up">
+                <span class="section-badge">Our Gallery</span>
+                <h1>Project Showcase & Media</h1>
+                <p>Explore our collection of completed projects, installations, and technology solutions that showcase our expertise and quality workmanship.</p>
+                
+                <div class="gallery-stats">
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-number" data-count="500">0</div>
+                        <div class="stat-label">Projects Documented</div>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-number" data-count="1000">0</div>
+                        <div class="stat-label">Photos & Media</div>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-number" data-count="50">0</div>
+                        <div class="stat-label">Client Sites</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-filter">
+        <div class="container">
+            <div class="filter-tabs" data-aos="fade-up">
+                <button class="filter-tab active" data-filter="all">All Media</button>
+                <button class="filter-tab" data-filter="networking">Networking</button>
+                <button class="filter-tab" data-filter="security">Security</button>
+                <button class="filter-tab" data-filter="communication">Communication</button>
+                <button class="filter-tab" data-filter="audiovisual">Audio Visual</button>
+                <button class="filter-tab" data-filter="datacenter">Data Center</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-grid-section">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item" data-category="networking" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-image">
+                        <img src="./pics/pexels-divinetechygirl-1181354.webp" alt="Network Infrastructure Setup" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Network Infrastructure Setup</h4>
+                                <p>Complete network cabling and equipment installation</p>
+                                <div class="gallery-category">Networking</div>
+                            </div>
+                            <button class="gallery-btn" onclick="openLightbox(0)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item" data-category="security" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-image">
+                        <img src="./pics/pexels-pixabay-60504.jpg" alt="CCTV Camera Installation" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>CCTV Camera Installation</h4>
+                                <p>High-definition security camera deployment</p>
+                                <div class="gallery-category">Security</div>
+                            </div>
+                            <button class="gallery-btn" onclick="openLightbox(1)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item" data-category="communication" data-aos="fade-up" data-aos-delay="300">
+                    <div class="gallery-image">
+                        <img src="./pics/pexels-mart-production-7251096.jpg" alt="PBX System Configuration" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>PBX System Configuration</h4>
+                                <p>Modern communication system setup</p>
+                                <div class="gallery-category">Communication</div>
+                            </div>
+                            <button class="gallery-btn" onclick="openLightbox(2)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item" data-category="audiovisual" data-aos="fade-up" data-aos-delay="400">
+                    <div class="gallery-image">
+                        <img src="./pics/pexels-fotografiagmazg-7522609.jpg" alt="Conference Room AV Setup" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Conference Room AV Setup</h4>
+                                <p>Professional audio-visual system installation</p>
+                                <div class="gallery-category">Audio Visual</div>
+                            </div>
+                            <button class="gallery-btn" onclick="openLightbox(3)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item" data-category="datacenter" data-aos="fade-up" data-aos-delay="500">
+                    <div class="gallery-image">
+                        <img src="./pics/alex-knight-2EJCSULRwC8-unsplash (1).webp" alt="Data Center Infrastructure" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Data Center Infrastructure</h4>
+                                <p>Enterprise-grade server room setup</p>
+                                <div class="gallery-category">Data Center</div>
+                            </div>
+                            <button class="gallery-btn" onclick="openLightbox(4)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item" data-category="security" data-aos="fade-up" data-aos-delay="600">
+                    <div class="gallery-image">
+                        <img src="./pics/pexels-ekaterinabelinskaya-4744711.jpg" alt="Access Control System" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Access Control System</h4>
+                                <p>Biometric access control installation</p>
+                                <div class="gallery-category">Security</div>
+                            </div>
+                            <button class="gallery-btn" onclick="openLightbox(5)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item" data-category="networking" data-aos="fade-up" data-aos-delay="700">
+                    <div class="gallery-image">
+                        <img src="./pics/alex-knight-2EJCSULRwC8-unsplash (2).webp" alt="Server Room Setup" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Server Room Setup</h4>
+                                <p>Professional server installation and configuration</p>
+                                <div class="gallery-category">Networking</div>
+                            </div>
+                            <button class="gallery-btn" onclick="openLightbox(6)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item" data-category="audiovisual" data-aos="fade-up" data-aos-delay="800">
+                    <div class="gallery-image">
+                        <img src="./pics/pexels-brett-sayles-4497197.jpg" alt="Presentation System" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Presentation System</h4>
+                                <p>Interactive display and projection setup</p>
+                                <div class="gallery-category">Audio Visual</div>
+                            </div>
+                            <button class="gallery-btn" onclick="openLightbox(7)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item" data-category="communication" data-aos="fade-up" data-aos-delay="900">
+                    <div class="gallery-image">
+                        <img src="./pics/pexels-mart-production-7252563.jpg" alt="VoIP System Installation" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>VoIP System Installation</h4>
+                                <p>IP-based communication system deployment</p>
+                                <div class="gallery-category">Communication</div>
+                            </div>
+                            <button class="gallery-btn" onclick="openLightbox(8)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 10 -->
+                <div class="gallery-item" data-category="networking" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="gallery-image">
+                        <img src="./pics/christopher-gower-m_HRfLhgABo-unsplash (1).webp" alt="Network Monitoring Setup" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Network Monitoring Setup</h4>
+                                <p>Advanced network monitoring and management</p>
+                                <div class="gallery-category">Networking</div>
+                            </div>
+                            <button class="gallery-btn" onclick="openLightbox(9)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 11 -->
+                <div class="gallery-item" data-category="security" data-aos="fade-up" data-aos-delay="1100">
+                    <div class="gallery-image">
+                        <img src="./pics/pexels-pixabay-373543 (1).jpg" alt="Security Control Room" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Security Control Room</h4>
+                                <p>Centralized security monitoring center</p>
+                                <div class="gallery-category">Security</div>
+                            </div>
+                            <button class="gallery-btn" onclick="openLightbox(10)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 12 -->
+                <div class="gallery-item" data-category="datacenter" data-aos="fade-up" data-aos-delay="1200">
+                    <div class="gallery-image">
+                        <img src="./pics/focused-woman-testing-vr-headset.jpg" alt="Technology Training" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Technology Training</h4>
+                                <p>Client training and system orientation</p>
+                                <div class="gallery-category">Training</div>
+                            </div>
+                            <button class="gallery-btn" onclick="openLightbox(11)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="load-more-container" data-aos="fade-up">
+                <button class="btn btn-secondary" id="loadMoreBtn">
+                    <i class="fas fa-plus"></i>
+                    <span>Load More Images</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-overlay" onclick="closeLightbox()"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-prev" onclick="prevImage()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-next" onclick="nextImage()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="lightbox-image-container">
+                <img id="lightboxImage" src="" alt="">
+                <div class="lightbox-info">
+                    <h3 id="lightboxTitle"></h3>
+                    <p id="lightboxDescription"></p>
+                    <span id="lightboxCategory" class="lightbox-category-tag"></span>
+                </div>
+            </div>
+            <div class="lightbox-counter">
+                <span id="lightboxCounter">1 / 12</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="gallery-cta">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Impressed by Our Work?</h2>
+                <p>Let's discuss how we can create similar solutions for your business</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-phone"></i>
+                        <span>Start Your Project</span>
+                    </a>
+                    <a href="portfolio.html" class="btn btn-secondary">
+                        <i class="fas fa-briefcase"></i>
+                        <span>View Case Studies</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-network-wired"></i>
+                        <span>OZONE I.T SYSTEM</span>
+                    </div>
+                    <p>Professional I.T solutions, networking and security systems. Transforming businesses with cutting-edge technology.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#networking">Networking</a></li>
+                        <li><a href="services.html#security">Security Systems</a></li>
+                        <li><a href="services.html#pbx">PBX Systems</a></li>
+                        <li><a href="services.html#audiovisual">Audio Visual</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                        <p><i class="fas fa-phone"></i> +254 700 000 000</p>
+                        <p><i class="fas fa-envelope"></i> info@ozoneitsystem.co.ke</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 OZONE I.T SYSTEM LTD. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chat Assistant -->
+    <div class="ai-chat" id="aiChat">
+        <div class="chat-header">
+            <div class="chat-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="chat-info">
+                <h4>AI Assistant</h4>
+                <span class="chat-status">Online</span>
+            </div>
+            <button class="chat-minimize" id="chatMinimize">
+                <i class="fas fa-minus"></i>
+            </button>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>Exploring our gallery? I can tell you more about any of these projects!</p>
+                    <div class="quick-actions">
+                        <button class="quick-action" data-action="services">Our Services</button>
+                        <button class="quick-action" data-action="contact">Get Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Ask about our projects...">
+            <button class="voice-input" id="voiceInput" aria-label="Voice input">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <button class="send-message" id="sendMessage" aria-label="Send message">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle" id="chatToggle" aria-label="Open chat">
+        <i class="fas fa-comments"></i>
+        <span class="chat-notification">1</span>
+    </button>
+    
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/ai-chat.js"></script>
+    <script src="./assets/js/particles.js"></script>
+    
+    <!-- Gallery Page Specific Script -->
+    <script>
+        // Gallery data
+        const galleryData = [
+            {
+                src: "./pics/pexels-divinetechygirl-1181354.webp",
+                title: "Network Infrastructure Setup",
+                description: "Complete network cabling and equipment installation for enterprise client",
+                category: "Networking"
+            },
+            {
+                src: "./pics/pexels-pixabay-60504.jpg",
+                title: "CCTV Camera Installation",
+                description: "High-definition security camera deployment with remote monitoring",
+                category: "Security"
+            },
+            {
+                src: "./pics/pexels-mart-production-7251096.jpg",
+                title: "PBX System Configuration",
+                description: "Modern communication system setup for call center operations",
+                category: "Communication"
+            },
+            {
+                src: "./pics/pexels-fotografiagmazg-7522609.jpg",
+                title: "Conference Room AV Setup",
+                description: "Professional audio-visual system installation for boardroom",
+                category: "Audio Visual"
+            },
+            {
+                src: "./pics/alex-knight-2EJCSULRwC8-unsplash (1).webp",
+                title: "Data Center Infrastructure",
+                description: "Enterprise-grade server room setup with redundancy",
+                category: "Data Center"
+            },
+            {
+                src: "./pics/pexels-ekaterinabelinskaya-4744711.jpg",
+                title: "Access Control System",
+                description: "Biometric access control installation for secure facility",
+                category: "Security"
+            },
+            {
+                src: "./pics/alex-knight-2EJCSULRwC8-unsplash (2).webp",
+                title: "Server Room Setup",
+                description: "Professional server installation and configuration",
+                category: "Networking"
+            },
+            {
+                src: "./pics/pexels-brett-sayles-4497197.jpg",
+                title: "Presentation System",
+                description: "Interactive display and projection setup for training room",
+                category: "Audio Visual"
+            },
+            {
+                src: "./pics/pexels-mart-production-7252563.jpg",
+                title: "VoIP System Installation",
+                description: "IP-based communication system deployment",
+                category: "Communication"
+            },
+            {
+                src: "./pics/christopher-gower-m_HRfLhgABo-unsplash (1).webp",
+                title: "Network Monitoring Setup",
+                description: "Advanced network monitoring and management system",
+                category: "Networking"
+            },
+            {
+                src: "./pics/pexels-pixabay-373543 (1).jpg",
+                title: "Security Control Room",
+                description: "Centralized security monitoring center installation",
+                category: "Security"
+            },
+            {
+                src: "./pics/focused-woman-testing-vr-headset.jpg",
+                title: "Technology Training",
+                description: "Client training and system orientation session",
+                category: "Training"
+            }
+        ];
+
+        let currentImageIndex = 0;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery filtering
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+                    
+                    const filter = tab.dataset.filter;
+                    
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.dataset.category === filter) {
+                            item.style.display = 'block';
+                            // Re-trigger AOS animations
+                            setTimeout(() => {
+                                item.classList.add('aos-animate');
+                            }, 100);
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Load more functionality
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', () => {
+                    // Simulate loading more images
+                    loadMoreBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+                    
+                    setTimeout(() => {
+                        loadMoreBtn.innerHTML = '<i class="fas fa-check"></i> All Images Loaded';
+                        loadMoreBtn.disabled = true;
+                    }, 2000);
+                });
+            }
+
+            // Keyboard navigation for lightbox
+            document.addEventListener('keydown', (e) => {
+                const lightbox = document.getElementById('lightbox');
+                if (lightbox.classList.contains('active')) {
+                    switch(e.key) {
+                        case 'Escape':
+                            closeLightbox();
+                            break;
+                        case 'ArrowLeft':
+                            prevImage();
+                            break;
+                        case 'ArrowRight':
+                            nextImage();
+                            break;
+                    }
+                }
+            });
+        });
+
+        // Lightbox functions
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxTitle = document.getElementById('lightboxTitle');
+            const lightboxDescription = document.getElementById('lightboxDescription');
+            const lightboxCategory = document.getElementById('lightboxCategory');
+            const lightboxCounter = document.getElementById('lightboxCounter');
+            
+            const imageData = galleryData[index];
+            
+            lightboxImage.src = imageData.src;
+            lightboxImage.alt = imageData.title;
+            lightboxTitle.textContent = imageData.title;
+            lightboxDescription.textContent = imageData.description;
+            lightboxCategory.textContent = imageData.category;
+            lightboxCounter.textContent = `${index + 1} / ${galleryData.length}`;
+            
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % galleryData.length;
+            updateLightboxImage();
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + galleryData.length) % galleryData.length;
+            updateLightboxImage();
+        }
+
+        function updateLightboxImage() {
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxTitle = document.getElementById('lightboxTitle');
+            const lightboxDescription = document.getElementById('lightboxDescription');
+            const lightboxCategory = document.getElementById('lightboxCategory');
+            const lightboxCounter = document.getElementById('lightboxCounter');
+            
+            const imageData = galleryData[currentImageIndex];
+            
+            // Add fade effect
+            lightboxImage.style.opacity = '0';
+            
+            setTimeout(() => {
+                lightboxImage.src = imageData.src;
+                lightboxImage.alt = imageData.title;
+                lightboxTitle.textContent = imageData.title;
+                lightboxDescription.textContent = imageData.description;
+                lightboxCategory.textContent = imageData.category;
+                lightboxCounter.textContent = `${currentImageIndex + 1} / ${galleryData.length}`;
+                
+                lightboxImage.style.opacity = '1';
+            }, 150);
+        }
+    </script>
+    
+    <!-- Page-specific styles -->
+    <style>
+        .gallery-hero {
+            padding: 120px 0 80px;
+            background: var(--gradient-hero);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gallery-stats {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .gallery-filter {
+            padding: 2rem 0;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .filter-tabs {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .filter-tab {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--border-color);
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border-radius: 2rem;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            font-weight: 500;
+        }
+        
+        .filter-tab:hover,
+        .filter-tab.active {
+            border-color: var(--primary-color);
+            background: var(--primary-color);
+            color: var(--text-inverse);
+        }
+        
+        .gallery-grid-section {
+            padding: var(--section-padding);
+            background: var(--bg-primary);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .gallery-item {
+            background: var(--bg-card);
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: all var(--transition-normal);
+            aspect-ratio: 4/3;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .gallery-image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+        
+        .gallery-item:hover .gallery-image img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-info h4 {
+            color: white;
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .gallery-info p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .gallery-category {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+        
+        .gallery-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        
+        .gallery-item:hover .gallery-btn {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .gallery-btn:hover {
+            background: var(--secondary-color);
+            transform: scale(1.1);
+        }
+        
+        .load-more-container {
+            text-align: center;
+        }
+        
+        /* Lightbox Styles */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-normal);
+        }
+        
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .lightbox-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            cursor: pointer;
+        }
+        
+        .lightbox-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            background: var(--error-color);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.25rem;
+            cursor: pointer;
+            z-index: 10;
+            transition: all var(--transition-normal);
+        }
+        
+        .lightbox-close:hover {
+            background: #dc2626;
+            transform: scale(1.1);
+        }
+        
+        .lightbox-prev,
+        .lightbox-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            backdrop-filter: blur(10px);
+        }
+        
+        .lightbox-prev {
+            left: -70px;
+        }
+        
+        .lightbox-next {
+            right: -70px;
+        }
+        
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .lightbox-image-container {
+            position: relative;
+            text-align: center;
+        }
+        
+        .lightbox-image-container img {
+            max-width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+            border-radius: 0.5rem;
+            transition: opacity 0.3s ease;
+        }
+        
+        .lightbox-info {
+            position: absolute;
+            bottom: -80px;
+            left: 0;
+            right: 0;
+            color: white;
+            text-align: center;
+        }
+        
+        .lightbox-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .lightbox-info p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+        
+        .lightbox-category-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .lightbox-counter {
+            position: absolute;
+            bottom: -120px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 0.875rem;
+            opacity: 0.7;
+        }
+        
+        .gallery-cta {
+            padding: var(--section-padding);
+            background: var(--gradient-primary);
+            text-align: center;
+        }
+        
+        .gallery-cta .cta-content h2 {
+            color: var(--text-inverse);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .gallery-cta .cta-content p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-buttons .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: var(--text-inverse);
+        }
+        
+        .cta-buttons .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1rem;
+            }
+            
+            .lightbox-prev {
+                left: -60px;
+            }
+            
+            .lightbox-next {
+                right: -60px;
+            }
+            
+            .lightbox-info {
+                bottom: -100px;
+            }
+            
+            .lightbox-counter {
+                bottom: -140px;
+            }
+            
+            .lightbox-info h3 {
+                font-size: 1.25rem;
+            }
+            
+            .lightbox-info p {
+                font-size: 0.875rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .lightbox-prev,
+            .lightbox-next {
+                width: 40px;
+                height: 40px;
+                font-size: 1.25rem;
+            }
+            
+            .lightbox-prev {
+                left: 10px;
+            }
+            
+            .lightbox-next {
+                right: 10px;
+            }
+            
+            .lightbox-close {
+                top: 10px;
+                right: 10px;
+            }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - OZONE I.T SYSTEM LTD | Professional ICT Solutions</title>
+    <meta name="description" content="Learn about OZONE I.T SYSTEM LTD - Your trusted partner in comprehensive I.T solutions with over 10 years of experience in Kenya">
+    <meta name="keywords" content="about ozone it system, company history, IT solutions Kenya, technology partner, professional team">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="About OZONE I.T SYSTEM LTD - Professional ICT Solutions">
+    <meta property="og:description" content="Learn about our mission, vision, and expertise in delivering cutting-edge I.T solutions">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ozoneitsystem.netlify.app/about.html">
+    <meta property="og:image" content="./pics/pexels-divinetechygirl-1181354.webp">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-network-wired"></i>
+                <span>OZONE I.T SYSTEM</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="about.html" class="nav-link active">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a>
+                <a href="services.html" class="nav-link">
+                    <i class="fas fa-cogs"></i>
+                    <span>Services</span>
+                </a>
+                <a href="portfolio.html" class="nav-link">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Portfolio</span>
+                </a>
+                <a href="blog.html" class="nav-link">
+                    <i class="fas fa-blog"></i>
+                    <span>Blog</span>
+                </a>
+                <a href="gallery.html" class="nav-link">
+                    <i class="fas fa-images"></i>
+                    <span>Gallery</span>
+                </a>
+                <a href="contact.html" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="search-toggle" id="searchToggle" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="nav-toggle" id="navToggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-bar" id="searchBar">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search our services, solutions..." autocomplete="off">
+                <button class="voice-search" id="voiceSearch" aria-label="Voice search">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <section class="breadcrumbs">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="active">About Us</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="hero-background">
+            <div class="particles" id="aboutParticles"></div>
+            <div class="gradient-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="about-hero-content" data-aos="fade-up">
+                <span class="section-badge">About OZONE I.T SYSTEM</span>
+                <h1>Your Trusted Technology Partner</h1>
+                <p>With over a decade of experience, we've been transforming businesses across Kenya with cutting-edge I.T solutions, innovative security systems, and reliable networking infrastructure.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-number" data-count="10">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-number" data-count="500">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-number" data-count="50">0</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="stat-number" data-count="24">0</div>
+                        <div class="stat-label">24/7 Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Story -->
+    <section class="company-story">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-content" data-aos="fade-right">
+                    <span class="section-badge">Our Story</span>
+                    <h2>Building the Future of Technology</h2>
+                    <p>Founded with a vision to revolutionize the I.T landscape in Kenya, OZONE I.T SYSTEM LTD has grown from a small startup to a leading provider of comprehensive technology solutions.</p>
+                    
+                    <div class="story-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Innovation First</h4>
+                                <p>We stay ahead of technology trends to provide cutting-edge solutions</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Client-Centric</h4>
+                                <p>Every solution is tailored to meet our clients' unique requirements</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Reliability</h4>
+                                <p>We ensure maximum uptime and performance for all our systems</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-visual" data-aos="fade-left">
+                    <div class="visual-card">
+                        <img src="./pics/pexels-divinetechygirl-1181354.webp" alt="OZONE I.T SYSTEM Team" loading="lazy">
+                        <div class="visual-overlay">
+                            <div class="play-button" id="playCompanyVideo">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="mv-grid">
+                <div class="mv-card mission-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To plan, enable and support proactive I.T services, networking and security solutions that drive business success and operational efficiency for our clients across Kenya and beyond.</p>
+                </div>
+                
+                <div class="mv-card vision-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To be the leading provider of innovative I.T solutions in Kenya, setting industry standards for quality, reliability, and customer satisfaction while fostering technological advancement.</p>
+                </div>
+                
+                <div class="mv-card values-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mv-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Our Values</h3>
+                    <p>Excellence, integrity, innovation, and customer satisfaction guide everything we do. We believe in building long-term partnerships based on trust and mutual success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="company-timeline">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Our Journey</span>
+                <h2>Milestones & Achievements</h2>
+                <p>A decade of growth, innovation, and success</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-date">2014</div>
+                    <div class="timeline-content">
+                        <h4>Company Founded</h4>
+                        <p>OZONE I.T SYSTEM LTD was established with a vision to provide comprehensive I.T solutions in Kenya.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-date">2016</div>
+                    <div class="timeline-content">
+                        <h4>First Major Contract</h4>
+                        <p>Secured our first major enterprise contract, establishing our reputation in the market.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-date">2018</div>
+                    <div class="timeline-content">
+                        <h4>Security Division Launch</h4>
+                        <p>Expanded our services to include comprehensive security systems and surveillance solutions.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h4>Digital Transformation</h4>
+                        <p>Helped businesses adapt to remote work with advanced networking and communication solutions.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h4>500+ Projects Milestone</h4>
+                        <p>Celebrated completing over 500 successful projects across various industries.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h4>AI Integration</h4>
+                        <p>Launched AI-powered solutions and smart automation services for modern businesses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Our Team</span>
+                <h2>Meet the Experts</h2>
+                <p>Dedicated professionals committed to your success</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-image">
+                        <img src="./pics/pexels-mart-production-7251096.jpg" alt="CEO" loading="lazy">
+                        <div class="team-overlay">
+                            <div class="social-links">
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>John Doe</h4>
+                        <p class="team-role">Chief Executive Officer</p>
+                        <p class="team-description">Visionary leader with 15+ years in I.T industry</p>
+                    </div>
+                </div>
+                
+                <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-image">
+                        <img src="./pics/pexels-mart-production-7252563.jpg" alt="CTO" loading="lazy">
+                        <div class="team-overlay">
+                            <div class="social-links">
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Jane Smith</h4>
+                        <p class="team-role">Chief Technology Officer</p>
+                        <p class="team-description">Technology expert specializing in network architecture</p>
+                    </div>
+                </div>
+                
+                <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-image">
+                        <img src="./pics/pexels-ekaterinabelinskaya-4744711.jpg" alt="Security Manager" loading="lazy">
+                        <div class="team-overlay">
+                            <div class="social-links">
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Mike Johnson</h4>
+                        <p class="team-role">Security Systems Manager</p>
+                        <p class="team-description">Certified security professional with extensive experience</p>
+                    </div>
+                </div>
+                
+                <div class="team-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="team-image">
+                        <img src="./pics/focused-woman-testing-vr-headset.jpg" alt="Project Manager" loading="lazy">
+                        <div class="team-overlay">
+                            <div class="social-links">
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Sarah Wilson</h4>
+                        <p class="team-role">Project Manager</p>
+                        <p class="team-description">Expert in project delivery and client relations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Partners -->
+    <section class="certifications">
+        <div class="container">
+            <div class="cert-grid">
+                <div class="cert-content" data-aos="fade-right">
+                    <span class="section-badge">Certifications & Partnerships</span>
+                    <h2>Industry Recognition</h2>
+                    <p>Our commitment to excellence is recognized through various industry certifications and strategic partnerships with leading technology providers.</p>
+                    
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>ISO 9001:2015 Quality Management</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>ISO 27001 Information Security</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-award"></i>
+                            <span>Cisco Certified Partner</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-medal"></i>
+                            <span>Microsoft Gold Partner</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-visual" data-aos="fade-left">
+                    <div class="cert-badges">
+                        <div class="cert-badge">
+                            <i class="fas fa-award"></i>
+                            <span>Excellence Award 2023</span>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-star"></i>
+                            <span>Top IT Provider</span>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-trophy"></i>
+                            <span>Innovation Leader</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Ready to Transform Your Business?</h2>
+                <p>Let's discuss how our expertise can help you achieve your technology goals</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-phone"></i>
+                        <span>Contact Us Today</span>
+                    </a>
+                    <a href="services.html" class="btn btn-secondary">
+                        <i class="fas fa-cogs"></i>
+                        <span>View Our Services</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-network-wired"></i>
+                        <span>OZONE I.T SYSTEM</span>
+                    </div>
+                    <p>Professional I.T solutions, networking and security systems. Transforming businesses with cutting-edge technology.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#networking">Networking</a></li>
+                        <li><a href="services.html#security">Security Systems</a></li>
+                        <li><a href="services.html#pbx">PBX Systems</a></li>
+                        <li><a href="services.html#audiovisual">Audio Visual</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                        <p><i class="fas fa-phone"></i> +254 700 000 000</p>
+                        <p><i class="fas fa-envelope"></i> info@ozoneitsystem.co.ke</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 OZONE I.T SYSTEM LTD. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chat Assistant -->
+    <div class="ai-chat" id="aiChat">
+        <div class="chat-header">
+            <div class="chat-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="chat-info">
+                <h4>AI Assistant</h4>
+                <span class="chat-status">Online</span>
+            </div>
+            <button class="chat-minimize" id="chatMinimize">
+                <i class="fas fa-minus"></i>
+            </button>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>Hello! I can help you learn more about OZONE I.T SYSTEM. What would you like to know?</p>
+                    <div class="quick-actions">
+                        <button class="quick-action" data-action="services">Our Services</button>
+                        <button class="quick-action" data-action="contact">Contact Info</button>
+                        <button class="quick-action" data-action="quote">Get Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Type your message...">
+            <button class="voice-input" id="voiceInput" aria-label="Voice input">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <button class="send-message" id="sendMessage" aria-label="Send message">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle" id="chatToggle" aria-label="Open chat">
+        <i class="fas fa-comments"></i>
+        <span class="chat-notification">1</span>
+    </button>
+    
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/ai-chat.js"></script>
+    <script src="./assets/js/particles.js"></script>
+    
+    <!-- Page-specific styles -->
+    <style>
+        .breadcrumbs {
+            padding: 120px 0 20px;
+            background: var(--bg-secondary);
+        }
+        
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+            font-size: 0.875rem;
+        }
+        
+        .breadcrumb-list li a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color var(--transition-normal);
+        }
+        
+        .breadcrumb-list li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .breadcrumb-list li.active {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .breadcrumb-list li:not(:last-child)::after {
+            content: '/';
+            margin-left: 1rem;
+            color: var(--text-tertiary);
+        }
+        
+        .about-hero {
+            padding: 80px 0;
+            background: var(--gradient-hero);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .company-story {
+            padding: var(--section-padding);
+            background: var(--bg-primary);
+        }
+        
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .story-highlights {
+            margin-top: 2rem;
+        }
+        
+        .highlight-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--bg-secondary);
+            border-radius: 0.75rem;
+            transition: transform var(--transition-normal);
+        }
+        
+        .highlight-item:hover {
+            transform: translateX(0.5rem);
+        }
+        
+        .highlight-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-inverse);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        
+        .mission-vision {
+            padding: var(--section-padding);
+            background: var(--bg-secondary);
+        }
+        
+        .mv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .mv-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: all var(--transition-normal);
+        }
+        
+        .mv-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .mv-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--text-inverse);
+            font-size: 2rem;
+        }
+        
+        .company-timeline {
+            padding: var(--section-padding);
+            background: var(--bg-primary);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary-color);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+        
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-date {
+            background: var(--primary-color);
+            color: var(--text-inverse);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+        
+        .timeline-content {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            width: calc(50% - 2rem);
+            margin: 0 2rem;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: auto;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: auto;
+        }
+        
+        .team-section {
+            padding: var(--section-padding);
+            background: var(--bg-secondary);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .team-card {
+            background: var(--bg-card);
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: all var(--transition-normal);
+        }
+        
+        .team-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .team-image {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+        
+        .team-card:hover .team-image img {
+            transform: scale(1.1);
+        }
+        
+        .team-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(37, 99, 235, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+        }
+        
+        .team-card:hover .team-overlay {
+            opacity: 1;
+        }
+        
+        .team-overlay .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .team-overlay .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all var(--transition-normal);
+        }
+        
+        .team-overlay .social-links a:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: scale(1.1);
+        }
+        
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .team-info h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        .team-role {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-description {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        .certifications {
+            padding: var(--section-padding);
+            background: var(--bg-primary);
+        }
+        
+        .cert-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .cert-list {
+            margin-top: 2rem;
+        }
+        
+        .cert-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: var(--bg-secondary);
+            border-radius: 0.5rem;
+        }
+        
+        .cert-item i {
+            color: var(--accent-color);
+            font-size: 1.25rem;
+        }
+        
+        .cert-badges {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .cert-badge {
+            background: var(--gradient-primary);
+            color: var(--text-inverse);
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            transition: transform var(--transition-normal);
+        }
+        
+        .cert-badge:hover {
+            transform: scale(1.05);
+        }
+        
+        .cert-badge i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section {
+            padding: var(--section-padding);
+            background: var(--gradient-primary);
+            text-align: center;
+        }
+        
+        .cta-content h2 {
+            color: var(--text-inverse);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-content p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-buttons .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: var(--text-inverse);
+        }
+        
+        .cta-buttons .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .story-grid,
+            .cert-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                flex-direction: column !important;
+                align-items: flex-start;
+                padding-left: 3rem;
+            }
+            
+            .timeline-date {
+                left: 20px;
+                transform: translateX(-50%);
+            }
+            
+            .timeline-content {
+                width: 100%;
+                margin: 2rem 0 0 0 !important;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</body>
+</html>

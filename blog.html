@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - OZONE I.T SYSTEM LTD | Tech Insights & Updates</title>
+    <meta name="description" content="Stay updated with the latest technology trends, I.T tips, and industry insights from OZONE I.T SYSTEM experts">
+    <meta name="keywords" content="IT blog, technology trends, networking tips, security updates, Kenya tech news">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-network-wired"></i>
+                <span>OZONE I.T SYSTEM</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="about.html" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a>
+                <a href="services.html" class="nav-link">
+                    <i class="fas fa-cogs"></i>
+                    <span>Services</span>
+                </a>
+                <a href="portfolio.html" class="nav-link">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Portfolio</span>
+                </a>
+                <a href="blog.html" class="nav-link active">
+                    <i class="fas fa-blog"></i>
+                    <span>Blog</span>
+                </a>
+                <a href="gallery.html" class="nav-link">
+                    <i class="fas fa-images"></i>
+                    <span>Gallery</span>
+                </a>
+                <a href="contact.html" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="search-toggle" id="searchToggle" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="nav-toggle" id="navToggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-bar" id="searchBar">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off">
+                <button class="voice-search" id="voiceSearch" aria-label="Voice search">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <section class="breadcrumbs">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="active">Blog</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="hero-background">
+            <div class="particles" id="blogParticles"></div>
+            <div class="gradient-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="blog-hero-content" data-aos="fade-up">
+                <span class="section-badge">Tech Insights</span>
+                <h1>Latest Technology Trends & Tips</h1>
+                <p>Stay ahead with expert insights, industry updates, and practical tips from our I.T professionals</p>
+                
+                <div class="blog-categories">
+                    <div class="category-item" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-network-wired"></i>
+                        <span>Networking</span>
+                    </div>
+                    <div class="category-item" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Security</span>
+                    </div>
+                    <div class="category-item" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-cloud"></i>
+                        <span>Cloud</span>
+                    </div>
+                    <div class="category-item" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Mobile</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="featured-article">
+        <div class="container">
+            <div class="featured-content" data-aos="fade-up">
+                <div class="featured-image">
+                    <img src="./pics/pexels-divinetechygirl-1181354.webp" alt="Featured Article" loading="lazy">
+                    <div class="featured-badge">Featured</div>
+                </div>
+                <div class="featured-text">
+                    <div class="article-meta">
+                        <span class="category">Networking</span>
+                        <span class="date">December 15, 2024</span>
+                        <span class="read-time">5 min read</span>
+                    </div>
+                    <h2>The Future of Network Infrastructure in Kenya</h2>
+                    <p>Explore how emerging technologies like 5G, IoT, and edge computing are reshaping network infrastructure requirements for businesses in Kenya...</p>
+                    <a href="#" class="read-more-btn">
+                        <span>Read Full Article</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Filter -->
+    <section class="blog-filter">
+        <div class="container">
+            <div class="filter-tabs" data-aos="fade-up">
+                <button class="filter-tab active" data-filter="all">All Articles</button>
+                <button class="filter-tab" data-filter="networking">Networking</button>
+                <button class="filter-tab" data-filter="security">Security</button>
+                <button class="filter-tab" data-filter="cloud">Cloud</button>
+                <button class="filter-tab" data-filter="tips">Tips & Guides</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-grid-section">
+        <div class="container">
+            <div class="blog-grid">
+                <!-- Article 1 -->
+                <article class="blog-card" data-category="security" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-image">
+                        <img src="./pics/pexels-pixabay-60504.jpg" alt="Cybersecurity Best Practices" loading="lazy">
+                        <div class="blog-category">Security</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">December 10, 2024</span>
+                            <span class="blog-read-time">3 min read</span>
+                        </div>
+                        <h3>Essential Cybersecurity Best Practices for Small Businesses</h3>
+                        <p>Learn the fundamental security measures every small business should implement to protect against cyber threats...</p>
+                        <div class="blog-tags">
+                            <span class="tag">Security</span>
+                            <span class="tag">Best Practices</span>
+                        </div>
+                        <a href="#" class="blog-link">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="blog-card" data-category="networking" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-image">
+                        <img src="./pics/alex-knight-2EJCSULRwC8-unsplash (1).webp" alt="Network Optimization" loading="lazy">
+                        <div class="blog-category">Networking</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">December 8, 2024</span>
+                            <span class="blog-read-time">4 min read</span>
+                        </div>
+                        <h3>How to Optimize Your Network Performance</h3>
+                        <p>Discover practical tips and techniques to improve your network speed and reliability for better business productivity...</p>
+                        <div class="blog-tags">
+                            <span class="tag">Networking</span>
+                            <span class="tag">Performance</span>
+                        </div>
+                        <a href="#" class="blog-link">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="blog-card" data-category="cloud" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-image">
+                        <img src="./pics/pexels-fotografiagmazg-7522609.jpg" alt="Cloud Migration" loading="lazy">
+                        <div class="blog-category">Cloud</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">December 5, 2024</span>
+                            <span class="blog-read-time">6 min read</span>
+                        </div>
+                        <h3>Cloud Migration: A Complete Guide for Businesses</h3>
+                        <p>Everything you need to know about migrating your business to the cloud, including benefits, challenges, and best practices...</p>
+                        <div class="blog-tags">
+                            <span class="tag">Cloud</span>
+                            <span class="tag">Migration</span>
+                        </div>
+                        <a href="#" class="blog-link">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="blog-card" data-category="tips" data-aos="fade-up" data-aos-delay="400">
+                    <div class="blog-image">
+                        <img src="./pics/pexels-brett-sayles-4497197.jpg" alt="IT Maintenance Tips" loading="lazy">
+                        <div class="blog-category">Tips & Guides</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">December 3, 2024</span>
+                            <span class="blog-read-time">5 min read</span>
+                        </div>
+                        <h3>10 Essential I.T Maintenance Tips</h3>
+                        <p>Keep your systems running smoothly with these essential maintenance tips that every business should follow...</p>
+                        <div class="blog-tags">
+                            <span class="tag">Maintenance</span>
+                            <span class="tag">Tips</span>
+                        </div>
+                        <a href="#" class="blog-link">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="blog-card" data-category="networking" data-aos="fade-up" data-aos-delay="500">
+                    <div class="blog-image">
+                        <img src="./pics/pexels-mart-production-7251096.jpg" alt="WiFi 6 Technology" loading="lazy">
+                        <div class="blog-category">Networking</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">November 30, 2024</span>
+                            <span class="blog-read-time">4 min read</span>
+                        </div>
+                        <h3>Understanding WiFi 6: What It Means for Your Business</h3>
+                        <p>Explore the benefits of WiFi 6 technology and how it can transform your wireless network performance...</p>
+                        <div class="blog-tags">
+                            <span class="tag">WiFi 6</span>
+                            <span class="tag">Technology</span>
+                        </div>
+                        <a href="#" class="blog-link">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="blog-card" data-category="security" data-aos="fade-up" data-aos-delay="600">
+                    <div class="blog-image">
+                        <img src="./pics/pexels-ekaterinabelinskaya-4744711.jpg" alt="Data Protection" loading="lazy">
+                        <div class="blog-category">Security</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">November 28, 2024</span>
+                            <span class="blog-read-time">7 min read</span>
+                        </div>
+                        <h3>Data Protection Regulations in Kenya: What You Need to Know</h3>
+                        <p>Stay compliant with Kenya's data protection laws and learn how to implement proper data security measures...</p>
+                        <div class="blog-tags">
+                            <span class="tag">Data Protection</span>
+                            <span class="tag">Compliance</span>
+                        </div>
+                        <a href="#" class="blog-link">Read More</a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="load-more-container" data-aos="fade-up">
+                <button class="btn btn-secondary" id="loadMoreBtn">
+                    <i class="fas fa-plus"></i>
+                    <span>Load More Articles</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-signup">
+        <div class="container">
+            <div class="newsletter-content" data-aos="fade-up">
+                <div class="newsletter-text">
+                    <h3>Stay Updated with Tech Insights</h3>
+                    <p>Subscribe to our newsletter for the latest I.T trends, tips, and industry updates</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Subscribe</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-network-wired"></i>
+                        <span>OZONE I.T SYSTEM</span>
+                    </div>
+                    <p>Professional I.T solutions, networking and security systems. Transforming businesses with cutting-edge technology.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#networking">Networking</a></li>
+                        <li><a href="services.html#security">Security Systems</a></li>
+                        <li><a href="services.html#pbx">PBX Systems</a></li>
+                        <li><a href="services.html#audiovisual">Audio Visual</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                        <p><i class="fas fa-phone"></i> +254 700 000 000</p>
+                        <p><i class="fas fa-envelope"></i> info@ozoneitsystem.co.ke</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 OZONE I.T SYSTEM LTD. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chat Assistant -->
+    <div class="ai-chat" id="aiChat">
+        <div class="chat-header">
+            <div class="chat-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="chat-info">
+                <h4>AI Assistant</h4>
+                <span class="chat-status">Online</span>
+            </div>
+            <button class="chat-minimize" id="chatMinimize">
+                <i class="fas fa-minus"></i>
+            </button>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>Looking for specific tech insights? I can help you find relevant articles!</p>
+                    <div class="quick-actions">
+                        <button class="quick-action" data-action="services">Our Services</button>
+                        <button class="quick-action" data-action="contact">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Ask about tech topics...">
+            <button class="voice-input" id="voiceInput" aria-label="Voice input">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <button class="send-message" id="sendMessage" aria-label="Send message">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle" id="chatToggle" aria-label="Open chat">
+        <i class="fas fa-comments"></i>
+        <span class="chat-notification">1</span>
+    </button>
+    
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/ai-chat.js"></script>
+    <script src="./assets/js/particles.js"></script>
+    
+    <!-- Blog Page Specific Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Blog filtering
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const blogCards = document.querySelectorAll('.blog-card');
+            
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+                    
+                    const filter = tab.dataset.filter;
+                    
+                    blogCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.style.display = 'block';
+                            // Re-trigger AOS animations
+                            setTimeout(() => {
+                                card.classList.add('aos-animate');
+                            }, 100);
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Load more functionality
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', () => {
+                    // Simulate loading more articles
+                    loadMoreBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+                    
+                    setTimeout(() => {
+                        loadMoreBtn.innerHTML = '<i class="fas fa-check"></i> All Articles Loaded';
+                        loadMoreBtn.disabled = true;
+                    }, 2000);
+                });
+            }
+        });
+    </script>
+    
+    <!-- Page-specific styles -->
+    <style>
+        .blog-hero {
+            padding: 120px 0 80px;
+            background: var(--gradient-hero);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-categories {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .category-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all var(--transition-normal);
+        }
+        
+        .category-item:hover {
+            transform: translateY(-0.5rem);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .category-item i {
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+        
+        .category-item span {
+            color: var(--text-inverse);
+            font-weight: 500;
+        }
+        
+        .featured-article {
+            padding: var(--section-padding);
+            background: var(--bg-primary);
+        }
+        
+        .featured-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            background: var(--bg-card);
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .featured-image {
+            position: relative;
+        }
+        
+        .featured-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .featured-text {
+            padding: 2rem;
+        }
+        
+        .article-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .article-meta .category {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .article-meta .date,
+        .article-meta .read-time {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        .featured-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .featured-text p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .read-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all var(--transition-normal);
+        }
+        
+        .read-more-btn:hover {
+            gap: 1rem;
+        }
+        
+        .blog-filter {
+            padding: 2rem 0;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .filter-tabs {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .filter-tab {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--border-color);
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border-radius: 2rem;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            font-weight: 500;
+        }
+        
+        .filter-tab:hover,
+        .filter-tab.active {
+            border-color: var(--primary-color);
+            background: var(--primary-color);
+            color: var(--text-inverse);
+        }
+        
+        .blog-grid-section {
+            padding: var(--section-padding);
+            background: var(--bg-primary);
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .blog-card {
+            background: var(--bg-card);
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: all var(--transition-normal);
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .blog-image {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+        
+        .blog-card:hover .blog-image img {
+            transform: scale(1.1);
+        }
+        
+        .blog-category {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+        }
+        
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        
+        .blog-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            line-height: 1.4;
+        }
+        
+        .blog-content p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .blog-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+        }
+        
+        .blog-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color var(--transition-normal);
+        }
+        
+        .blog-link:hover {
+            color: var(--secondary-color);
+        }
+        
+        .load-more-container {
+            text-align: center;
+        }
+        
+        .newsletter-signup {
+            padding: 3rem 0;
+            background: var(--gradient-primary);
+        }
+        
+        .newsletter-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .newsletter-text h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-inverse);
+            margin-bottom: 0.5rem;
+        }
+        
+        .newsletter-text p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            min-width: 400px;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.875rem 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            outline: none;
+        }
+        
+        .newsletter-form .btn {
+            white-space: nowrap;
+            background: var(--accent-color);
+        }
+        
+        .newsletter-form .btn:hover {
+            background: #0891b2;
+        }
+        
+        @media (max-width: 768px) {
+            .featured-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-text {
+                padding: 1.5rem;
+            }
+            
+            .featured-text h2 {
+                font-size: 1.5rem;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .newsletter-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .newsletter-form {
+                min-width: auto;
+                width: 100%;
+                max-width: 400px;
+            }
+            
+            .article-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</body>
+</html>
