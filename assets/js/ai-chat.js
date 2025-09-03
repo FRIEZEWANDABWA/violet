@@ -28,7 +28,8 @@ class AIChatAssistant {
         }
 
         if (chatMinimize) {
-            chatMinimize.addEventListener('click', () => {
+            chatMinimize.addEventListener('click', (e) => {
+                e.stopPropagation();
                 this.minimizeChat();
             });
         }
@@ -71,14 +72,9 @@ class AIChatAssistant {
     }
 
     showInitialPopup() {
-        setTimeout(() => {
-            this.showChat();
-            this.addBotMessage("👋 Hi! I'm Ozone AI. How can I help you with OZONE I.T SYSTEM services today?");
-            
-            setTimeout(() => {
-                this.minimizeChat();
-            }, 4000);
-        }, 1000);
+        // Chat starts minimized by default - no auto-popup
+        this.isOpen = false;
+        this.isMinimized = true;
     }
 
     toggleChat() {
@@ -99,8 +95,20 @@ class AIChatAssistant {
             this.isOpen = true;
             this.isMinimized = false;
             
+            // Hide notification badge
             if (notification) {
                 notification.style.display = 'none';
+            }
+            
+            // Change chat toggle icon
+            const chatIcon = chatToggle?.querySelector('i');
+            if (chatIcon) {
+                chatIcon.className = 'fas fa-times';
+            }
+            
+            // Add initial message if first time opening
+            if (this.messageHistory.length === 0) {
+                this.addBotMessage("👋 Hi! I'm Ozone AI. How can I help you with OZONE I.T SYSTEM services today?", true);
             }
             
             const chatInput = document.getElementById('chatInput');
@@ -112,6 +120,7 @@ class AIChatAssistant {
 
     minimizeChat() {
         const aiChat = document.getElementById('aiChat');
+        const chatToggle = document.getElementById('chatToggle');
         
         if (aiChat) {
             aiChat.classList.remove('active');
@@ -119,11 +128,17 @@ class AIChatAssistant {
             this.isMinimized = true;
         }
         
-        const chatToggle = document.getElementById('chatToggle');
+        // Show notification badge
         const notification = chatToggle?.querySelector('.chat-notification');
         if (notification) {
             notification.style.display = 'flex';
             notification.textContent = '💬';
+        }
+        
+        // Change chat toggle icon
+        const chatIcon = chatToggle?.querySelector('i');
+        if (chatIcon) {
+            chatIcon.className = 'fas fa-comments';
         }
     }
 
