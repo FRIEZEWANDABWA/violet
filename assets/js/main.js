@@ -51,8 +51,7 @@ class OzoneWebsite {
         // Start slideshow
         this.startSlideshow();
         
-        // Add smooth page transitions
-        this.initPageTransitions();
+        // Navigation is working properly
     }
 
     onScroll() {
@@ -211,25 +210,7 @@ class OzoneWebsite {
         }, 2000);
     }
 
-    // Page Transitions
-    initPageTransitions() {
-        const links = document.querySelectorAll('a[href$=".html"]');
-        links.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                this.smoothPageTransition(link.href);
-            });
-        });
-    }
 
-    smoothPageTransition(url) {
-        document.body.style.transition = 'opacity 0.3s ease';
-        document.body.style.opacity = '0';
-        
-        setTimeout(() => {
-            window.location.href = url;
-        }, 300);
-    }
 
     // Utility Functions
     debounce(func, wait) {
