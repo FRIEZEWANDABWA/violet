@@ -71,25 +71,5 @@
     // Wait for AOS to load
     setTimeout(initAOS, 100);
     
-    // Page transition effect
-    function addPageTransitions() {
-        const links = document.querySelectorAll('a[href$=".html"]');
-        links.forEach(link => {
-            if (link.hostname === window.location.hostname) {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    document.body.style.transition = 'opacity 0.2s ease';
-                    document.body.style.opacity = '0.7';
-                    
-                    setTimeout(() => {
-                        window.location.href = this.href;
-                    }, 200);
-                });
-            }
-        });
-    }
-    
-    // Add transitions when DOM is ready
-    document.addEventListener('DOMContentLoaded', addPageTransitions);
+
 })();
