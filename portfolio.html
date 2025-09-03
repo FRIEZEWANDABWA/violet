@@ -15,6 +15,7 @@
     
     <!-- Immediate Content Fix -->
     <script src="./assets/js/page-fix.js"></script>
+    <script src="./assets/js/mobile-fix.js"></script>
     <style>
         /* Force all content visible immediately */
         * { opacity: 1 !important; visibility: visible !important; }
@@ -1184,8 +1185,33 @@
         }
         
         @media (max-width: 768px) {
+            /* Force all content visible on mobile */
+            * {
+                opacity: 1 !important;
+                visibility: visible !important;
+                transform: none !important;
+            }
+            
+            .portfolio-hero {
+                padding: 100px 0 40px;
+            }
+            
+            .portfolio-hero-content h1 {
+                font-size: 2rem !important;
+            }
+            
+            .portfolio-stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+            
             .portfolio-grid {
                 grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .portfolio-item {
+                aspect-ratio: 16/10;
             }
             
             .testimonials-grid {
@@ -1208,6 +1234,16 @@
             .project-meta {
                 flex-direction: column;
                 gap: 0.5rem;
+            }
+            
+            .filter-tabs {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            
+            .filter-tab {
+                font-size: 0.875rem;
+                padding: 0.5rem 1rem;
             }
         }
     </style>
