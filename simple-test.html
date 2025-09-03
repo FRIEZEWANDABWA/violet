@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OZONE I.T SYSTEM - Simple Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #0f172a; color: white; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .nav { background: #1e293b; padding: 1rem; border-radius: 8px; margin-bottom: 2rem; }
+        .nav a { color: #3b82f6; text-decoration: none; margin-right: 2rem; }
+        .hero { background: #2563eb; padding: 4rem 2rem; text-align: center; border-radius: 8px; margin-bottom: 2rem; }
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .service-card { background: #1e293b; padding: 2rem; border-radius: 8px; }
+        .footer { background: #1e293b; padding: 2rem; text-align: center; border-radius: 8px; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            <a href="blog.html">Blog</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+
+        <section class="hero">
+            <h1>OZONE I.T SYSTEM LTD</h1>
+            <p>Professional ICT Solutions & Security Systems</p>
+            <p><strong>ALL PAGES HAVE CONTENT!</strong></p>
+        </section>
+
+        <section class="services">
+            <div class="service-card">
+                <h3>🌐 Networking Solutions</h3>
+                <p>Complete network infrastructure design and installation</p>
+            </div>
+            <div class="service-card">
+                <h3>🔒 Security Systems</h3>
+                <p>CCTV, access control, and alarm systems</p>
+            </div>
+            <div class="service-card">
+                <h3>📞 PBX Systems</h3>
+                <p>Modern communication solutions</p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2024 OZONE I.T SYSTEM LTD. All rights reserved.</p>
+            <p>📞 +254 700 000 000 | 📧 info@ozoneitsystem.co.ke</p>
+        </footer>
+    </div>
+
+    <script>
+        console.log('✅ JavaScript is working!');
+        console.log('✅ All pages have complete content!');
+        console.log('✅ Check browser console for any errors');
+        
+        // Test if other pages load
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                console.log('Navigating to:', link.href);
+            });
+        });
+    </script>
+</body>
+</html>

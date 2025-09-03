@@ -28,12 +28,31 @@ class OzoneWebsite {
     }
 
     onDOMContentLoaded() {
-        // Ensure all content is visible
+        // Ensure all content is visible immediately
         document.body.style.opacity = '1';
         document.body.style.visibility = 'visible';
         
+        // Force show all elements
+        const allElements = document.querySelectorAll('*');
+        allElements.forEach(el => {
+            el.style.opacity = '1';
+            el.style.visibility = 'visible';
+        });
+        
+        // Initialize AOS if available
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
+        }
+        
         // Start slideshow
         this.startSlideshow();
+        
+        // Add smooth page transitions
+        this.initPageTransitions();
     }
 
     onScroll() {
@@ -190,6 +209,26 @@ class OzoneWebsite {
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
         }, 2000);
+    }
+
+    // Page Transitions
+    initPageTransitions() {
+        const links = document.querySelectorAll('a[href$=".html"]');
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.smoothPageTransition(link.href);
+            });
+        });
+    }
+
+    smoothPageTransition(url) {
+        document.body.style.transition = 'opacity 0.3s ease';
+        document.body.style.opacity = '0';
+        
+        setTimeout(() => {
+            window.location.href = url;
+        }, 300);
     }
 
     // Utility Functions
