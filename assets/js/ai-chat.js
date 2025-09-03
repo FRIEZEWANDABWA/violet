@@ -73,14 +73,12 @@ class AIChatAssistant {
     showInitialPopup() {
         setTimeout(() => {
             this.showChat();
-            this.addBotMessage("👋 Hi! I'm your AI assistant. How can I help you with OZONE I.T SYSTEM services today?");
+            this.addBotMessage("👋 Hi! I'm Ozone AI. How can I help you with OZONE I.T SYSTEM services today?");
             
             setTimeout(() => {
-                if (!this.hasUserInteracted()) {
-                    this.minimizeChat();
-                }
-            }, 5000);
-        }, 2000);
+                this.minimizeChat();
+            }, 4000);
+        }, 1000);
     }
 
     toggleChat() {
@@ -193,7 +191,7 @@ class AIChatAssistant {
         let showQuickActions = false;
         
         if (this.containsAny(lowerMessage, ['hello', 'hi', 'hey'])) {
-            response = "Hello! 👋 Welcome to OZONE I.T SYSTEM. How can I help you today?";
+            response = "Hello! 👋 I'm Ozone AI. Welcome to OZONE I.T SYSTEM. How can I help you today?";
             showQuickActions = true;
         }
         else if (this.containsAny(lowerMessage, ['service', 'services'])) {
