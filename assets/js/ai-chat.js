@@ -11,7 +11,19 @@ class AIChatAssistant {
         this.setupEventListeners();
         this.loadKnowledgeBase();
         this.showChatButton();
+        this.forceMinimized();
         this.showInitialPopup();
+    }
+
+    forceMinimized() {
+        // Force chat to be minimized on all devices
+        const aiChat = document.getElementById('aiChat');
+        if (aiChat) {
+            aiChat.classList.remove('active');
+            aiChat.style.display = 'none'; // Hide completely initially
+        }
+        this.isOpen = false;
+        this.isMinimized = true;
     }
 
     setupEventListeners() {
@@ -91,6 +103,7 @@ class AIChatAssistant {
         const notification = chatToggle?.querySelector('.chat-notification');
         
         if (aiChat) {
+            aiChat.style.display = 'flex'; // Show the chat
             aiChat.classList.add('active');
             this.isOpen = true;
             this.isMinimized = false;
@@ -124,6 +137,12 @@ class AIChatAssistant {
         
         if (aiChat) {
             aiChat.classList.remove('active');
+            // Force hide on mobile
+            setTimeout(() => {
+                if (!this.isOpen) {
+                    aiChat.style.display = 'none';
+                }
+            }, 300);
             this.isOpen = false;
             this.isMinimized = true;
         }

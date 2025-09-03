@@ -711,7 +711,7 @@ body {
     border-radius: 1rem;
     box-shadow: var(--shadow-xl);
     z-index: 1000;
-    display: flex;
+    display: none; /* Hidden by default */
     flex-direction: column;
     transform: translateY(100%);
     opacity: 0;
@@ -720,6 +720,7 @@ body {
 }
 
 .ai-chat.active {
+    display: flex !important; /* Force show when active */
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
