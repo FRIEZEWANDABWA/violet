@@ -1,0 +1,76 @@
+{
+  "name": "Hon. Violet Makhanu - MCA Mihuu Ward",
+  "short_name": "Violet Makhanu",
+  "description": "Official website of Hon. Violet Namaemba Makhanu, MCA for Mihuu Ward, Bungoma County. Leadership You Can Trust, Impact You Can See.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "categories": ["government", "politics", "news"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "About Violet",
+      "short_name": "About",
+      "description": "Learn about Hon. Violet Makhanu's story and background",
+      "url": "/#about",
+      "icons": [
+        {
+          "src": "./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg",
+          "sizes": "96x96",
+          "type": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "name": "Achievements",
+      "short_name": "Impact",
+      "description": "View Violet's achievements and community impact",
+      "url": "/#achievements",
+      "icons": [
+        {
+          "src": "./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg",
+          "sizes": "96x96",
+          "type": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with Hon. Violet Makhanu",
+      "url": "/#contact",
+      "icons": [
+        {
+          "src": "./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg",
+          "sizes": "96x96",
+          "type": "image/jpeg"
+        }
+      ]
+    }
+  ]
+}

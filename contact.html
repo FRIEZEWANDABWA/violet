@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Hon. Violet Makhanu | Get in Touch</title>
+    <meta name="description" content="Contact Hon. Violet Makhanu - MCA Mihuu Ward. Office location, phone, email and contact form for constituents and supporters.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="dark-mode">
+    <div class="scroll-progress"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg" alt="Hon. Violet Makhanu" class="nav-avatar">
+                <span class="nav-name">Hon. Violet Makhanu</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" translate-id="nav-home">Home</a>
+                <a href="about.html" class="nav-link" translate-id="nav-about">About</a>
+                <a href="achievements.html" class="nav-link" translate-id="nav-achievements">Achievements</a>
+                <a href="vision.html" class="nav-link" translate-id="nav-vision">Vision 2027</a>
+                <a href="media.html" class="nav-link" translate-id="nav-media">Media</a>
+                <a href="contact.html" class="nav-link active" translate-id="nav-contact">Contact</a>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-background">
+            <div class="particles-container" id="particles"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text" data-aos="fade-up" style="text-align: center;">
+                    <h1 class="hero-title" translate-id="contact-title">Stay Connected</h1>
+                    <p class="hero-subtitle" translate-id="contact-subtitle">Your voice matters. I'm here to listen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 translate-id="contact-office">Office Location</h3>
+                            <p>Mihuu Ward Offices<br>Bungoma County, Kenya</p>
+                            <p style="margin-top: 1rem; color: var(--text-secondary);">
+                                <strong>Office Hours:</strong><br>
+                                Monday - Friday: 8:00 AM - 5:00 PM<br>
+                                Saturday: 9:00 AM - 1:00 PM
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 translate-id="contact-phone">Phone</h3>
+                            <p>+254 700 000 000</p>
+                            <p style="color: var(--text-secondary);">Available 24/7 for emergencies</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 translate-id="contact-email">Email</h3>
+                            <p>violet@mihuu.go.ke</p>
+                            <p style="color: var(--text-secondary);">Response within 24 hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name" translate-id="form-name">Your Name</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email" translate-id="form-email">Email Address</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone">
+                            <label for="phone" translate-id="form-phone">Phone Number</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="subject" name="subject" required>
+                                <option value="" translate-id="form-subject">Select Subject</option>
+                                <option value="bursary">Bursary Application</option>
+                                <option value="project">Project Inquiry</option>
+                                <option value="volunteer">Volunteer Opportunity</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="complaint">Complaint/Concern</option>
+                                <option value="suggestion">Suggestion</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message" translate-id="form-message">Your Message</label>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" id="ai-assist">
+                                <i class="fas fa-robot"></i>
+                                <span translate-id="btn-ai">AI Quick Answer</span>
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                <span translate-id="btn-send">Send Message</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section style="background: var(--bg-secondary); padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">How I Can Help</h2>
+                <p class="section-subtitle">Services available to Mihuu Ward residents</p>
+            </div>
+            
+            <div class="achievements-grid">
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="achievement-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Bursary Applications</h3>
+                    <p>Apply for educational bursaries for primary, secondary, and tertiary education. Fair and transparent process.</p>
+                </div>
+                
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="achievement-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Development Projects</h3>
+                    <p>Report infrastructure needs, propose community projects, and track ongoing development initiatives.</p>
+                </div>
+                
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="achievement-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Dispute Resolution</h3>
+                    <p>Mediation services for land disputes, community conflicts, and other local issues requiring intervention.</p>
+                </div>
+                
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="achievement-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Community Support</h3>
+                    <p>Emergency assistance, welfare support, and connection to government and NGO programs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Hours & Location -->
+    <section style="padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Visit My Office</h2>
+                <p class="section-subtitle">Walk-ins welcome during office hours</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;" data-aos="fade-up">
+                <div>
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">Office Schedule</h3>
+                    <div style="background: var(--bg-secondary); padding: 2rem; border-radius: 1rem;">
+                        <div style="margin-bottom: 1rem;">
+                            <strong>Monday - Friday</strong><br>
+                            <span style="color: var(--text-secondary);">8:00 AM - 5:00 PM</span>
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <strong>Saturday</strong><br>
+                            <span style="color: var(--text-secondary);">9:00 AM - 1:00 PM</span>
+                        </div>
+                        <div>
+                            <strong>Sunday</strong><br>
+                            <span style="color: var(--text-secondary);">Closed (Emergency calls only)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">What to Bring</h3>
+                    <div style="background: var(--bg-secondary); padding: 2rem; border-radius: 1rem;">
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-id-card" style="color: var(--primary); margin-right: 0.5rem;"></i> Valid ID or Passport</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-file-alt" style="color: var(--primary); margin-right: 0.5rem;"></i> Relevant documents</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt" style="color: var(--primary); margin-right: 0.5rem;"></i> Proof of residence in Mihuu Ward</li>
+                            <li><i class="fas fa-clock" style="color: var(--primary); margin-right: 0.5rem;"></i> Patience (we serve everyone fairly)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg" alt="Hon. Violet Makhanu">
+                        <div>
+                            <h3>Hon. Violet Makhanu</h3>
+                            <p translate-id="footer-tagline">Service • Impact • Leadership</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 translate-id="footer-links">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="achievements.html">Achievements</a></li>
+                        <li><a href="vision.html">Vision 2027</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 translate-id="footer-involve">Get Involved</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="media.html">Media</a></li>
+                        <li><a href="#volunteer">Volunteer</a></li>
+                        <li><a href="#events">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 translate-id="footer-connect">Connect</h4>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hon. Violet Makhanu. All rights reserved.</p>
+                <p>Built with ❤️ for the people of Mihuu Ward</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chat Assistant -->
+    <div class="ai-chat" id="ai-chat">
+        <div class="chat-header">
+            <div class="chat-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="chat-info">
+                <h4 translate-id="chat-title">Violet AI Assistant</h4>
+                <span class="chat-status" translate-id="chat-status">Online</span>
+            </div>
+            <button class="chat-minimize" id="chat-minimize">
+                <i class="fas fa-minus"></i>
+            </button>
+        </div>
+        
+        <div class="chat-body" id="chat-body">
+            <div class="chat-message bot">
+                <div class="message-content">
+                    <p>Hello! I can help you with contact information, office hours, or guide you through the contact form. What do you need assistance with?</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input">
+            <input type="text" id="chat-input" translate-id="chat-placeholder" placeholder="Ask me anything...">
+            <button id="chat-send"><i class="fas fa-paper-plane"></i></button>
+            <button id="chat-voice"><i class="fas fa-microphone"></i></button>
+        </div>
+    </div>
+
+    <button class="chat-toggle" id="chat-toggle">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/particles.js"></script>
+    <script src="./assets/js/ai-chat.js"></script>
+    <script src="./assets/js/translate.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

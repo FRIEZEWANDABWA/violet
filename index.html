@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hon. Violet Makhanu - MCA Mihuu Ward | Leadership You Can Trust</title>
+    <meta name="description" content="Official website of Hon. Violet Namaemba Makhanu, MCA for Mihuu Ward, Bungoma County. From grassroots to Parliament - Service, Impact, Leadership.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://violetmakhanu.com/">
+    <meta property="og:title" content="Hon. Violet Makhanu - Leadership You Can Trust">
+    <meta property="og:description" content="From Mihuu to Parliament – Leadership You Can Trust, Impact You Can See.">
+    <meta property="og:image" content="./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://violetmakhanu.com/">
+    <meta property="twitter:title" content="Hon. Violet Makhanu - Leadership You Can Trust">
+    <meta property="twitter:description" content="From Mihuu to Parliament – Leadership You Can Trust, Impact You Can See.">
+    <meta property="twitter:image" content="./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#1a1a1a">
+</head>
+<body class="dark-mode">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg" alt="Hon. Violet Makhanu" class="nav-avatar">
+                <span class="nav-name">Hon. Violet Makhanu</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active" translate-id="nav-home">Home</a>
+                <a href="about.html" class="nav-link" translate-id="nav-about">About</a>
+                <a href="achievements.html" class="nav-link" translate-id="nav-achievements">Achievements</a>
+                <a href="vision.html" class="nav-link" translate-id="nav-vision">Vision 2027</a>
+                <a href="media.html" class="nav-link" translate-id="nav-media">Media</a>
+                <a href="contact.html" class="nav-link" translate-id="nav-contact">Contact</a>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button class="voice-search" id="voice-search">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="particles-container" id="particles"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text" data-aos="fade-up">
+                    <h1 class="hero-title" translate-id="hero-title">
+                        From <span class="highlight">Mihuu</span> to Parliament
+                        <br>Leadership You Can <span class="highlight">Trust</span>
+                    </h1>
+                    <p class="hero-subtitle" translate-id="hero-subtitle">
+                        Impact You Can See. Service You Can Count On.
+                        <br>Your elected MCA ready to take our voice to Parliament.
+                    </p>
+                    <div class="hero-cta">
+                        <button class="btn btn-primary" onclick="scrollToSection('about')">
+                            <i class="fas fa-user"></i>
+                            <span translate-id="hero-btn1">See My Journey</span>
+                        </button>
+                        <button class="btn btn-secondary" onclick="scrollToSection('contact')">
+                            <i class="fas fa-handshake"></i>
+                            <span translate-id="hero-btn2">Join the Movement</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
+                    <img src="./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg" alt="Hon. Violet Makhanu" class="hero-photo">
+                </div>
+            </div>
+        </div>
+        
+        <!-- KPI Cards -->
+        <div class="kpi-section" data-aos="fade-up" data-aos-delay="400">
+            <div class="container">
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="kpi-number" data-count="10">0</div>
+                        <div class="kpi-label" translate-id="kpi-schools">Schools Supported</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <div class="kpi-number" data-count="5">0</div>
+                        <div class="kpi-label" translate-id="kpi-dispensaries">Dispensaries Built</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <div class="kpi-number" data-count="1000">0</div>
+                        <div class="kpi-label" translate-id="kpi-families">Families Connected to Water</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="kpi-number" data-count="3">0</div>
+                        <div class="kpi-label" translate-id="kpi-terms">Terms as MCA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" translate-id="about-title">My Story</h2>
+                <p class="section-subtitle" translate-id="about-subtitle">From humble beginnings to servant leadership</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <div class="story-card">
+                        <h3 data-i18n="about.story1.title">Born to Serve</h3>
+                        <p data-i18n="about.story1.text">Born and raised in Mihuu, I know firsthand the struggles of everyday citizens. Before leadership, I was a small-scale trader and tailor, working hard to provide for my family. But I always carried a dream bigger than myself: to serve my people and transform our community.</p>
+                    </div>
+                    
+                    <div class="story-card">
+                        <h3 data-i18n="about.story2.title">The Journey Begins</h3>
+                        <p data-i18n="about.story2.text">That dream became reality in 2013 when I was nominated MCA. In 2017, you entrusted me with your votes—and again in 2022. Each step has been fueled by your faith and my unwavering commitment to service.</p>
+                    </div>
+                    
+                    <blockquote class="pull-quote" data-i18n="about.quote">
+                        "Leadership is not about titles—it's about service, integrity, and leaving no one behind."
+                    </blockquote>
+                </div>
+                
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="timeline">
+                        <div class="timeline-item active">
+                            <div class="timeline-year">2013</div>
+                            <div class="timeline-content">
+                                <h4 data-i18n="timeline.2013">Nominated MCA</h4>
+                                <p data-i18n="timeline.2013.desc">Started my leadership journey under ODM</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item active">
+                            <div class="timeline-year">2017</div>
+                            <div class="timeline-content">
+                                <h4 data-i18n="timeline.2017">Elected MCA</h4>
+                                <p data-i18n="timeline.2017.desc">Delivered tangible development projects</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item active">
+                            <div class="timeline-year">2022</div>
+                            <div class="timeline-content">
+                                <h4 data-i18n="timeline.2022">Re-elected MCA</h4>
+                                <p data-i18n="timeline.2022.desc">Chairperson of Youth Affairs & Sports Committee</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2027</div>
+                            <div class="timeline-content">
+                                <h4 data-i18n="timeline.2027">Parliament Bound</h4>
+                                <p data-i18n="timeline.2027.desc">Ready to take Mihuu's voice to the next level</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" translate-id="achievements-title">Proven Impact</h2>
+                <p class="section-subtitle" translate-id="achievements-subtitle">Tangible results that speak for themselves</p>
+            </div>
+            
+            <div class="achievements-grid">
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="achievement-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3 data-i18n="achievement.roads">Road Networks</h3>
+                    <p data-i18n="achievement.roads.desc">Improved road infrastructure across Mihuu Ward, connecting communities and boosting economic activities.</p>
+                </div>
+                
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="achievement-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3 data-i18n="achievement.water">Clean Water Access</h3>
+                    <p data-i18n="achievement.water.desc">Expanded access to clean water through strategic borehole projects, serving over 1000 families.</p>
+                </div>
+                
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="achievement-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3 data-i18n="achievement.health">Healthcare Facilities</h3>
+                    <p data-i18n="achievement.health.desc">Construction and upgrade of dispensaries for better healthcare access across the ward.</p>
+                </div>
+                
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="achievement-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 data-i18n="achievement.education">Education Support</h3>
+                    <p data-i18n="achievement.education.desc">Fair and transparent bursary distribution, supporting over 10 schools and hundreds of students.</p>
+                </div>
+                
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="achievement-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3 data-i18n="achievement.land">Land Rights</h3>
+                    <p data-i18n="achievement.land.desc">Strong voice in defending community land and heritage, including the protection of Chetambe Hills.</p>
+                </div>
+                
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="achievement-icon">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <h3 data-i18n="achievement.youth">Youth Programs</h3>
+                    <p data-i18n="achievement.youth.desc">Football tournaments, mentorship programs, and skills training for youth empowerment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision 2027 Section -->
+    <section id="vision" class="vision">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" translate-id="vision-title">Vision 2027 & Beyond</h2>
+                <p class="section-subtitle" translate-id="vision-subtitle">Taking Mihuu's voice to Parliament</p>
+            </div>
+            
+            <div class="vision-content">
+                <div class="vision-intro" data-aos="fade-up">
+                    <p class="vision-text" data-i18n="vision.intro">
+                        Leadership doesn't stop at the ward level. My mission is to take Mihuu's voice to Parliament, where bigger policies and larger resources can transform our lives. As your next MP, I envision a constituency where every child gets an education, every youth has a job or skill, and every family enjoys better healthcare and infrastructure.
+                    </p>
+                </div>
+                
+                <div class="agenda-grid">
+                    <div class="agenda-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="agenda-number">01</div>
+                        <div class="agenda-content">
+                            <h3 data-i18n="agenda.1">Education First</h3>
+                            <p data-i18n="agenda.1.desc">More bursaries, scholarships, and digital learning hubs for our children's future.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="agenda-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="agenda-number">02</div>
+                        <div class="agenda-content">
+                            <h3 data-i18n="agenda.2">Youth Empowerment</h3>
+                            <p data-i18n="agenda.2.desc">Vocational training, sports development, and start-up funding for our youth.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="agenda-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="agenda-number">03</div>
+                        <div class="agenda-content">
+                            <h3 data-i18n="agenda.3">Healthcare for All</h3>
+                            <p data-i18n="agenda.3.desc">Modern facilities and expanded dispensaries across every village.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="agenda-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="agenda-number">04</div>
+                        <div class="agenda-content">
+                            <h3 data-i18n="agenda.4">Agriculture & Jobs</h3>
+                            <p data-i18n="agenda.4.desc">Support for farmers, market access, and investment in agribusiness.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="agenda-item" data-aos="fade-up" data-aos-delay="500">
+                        <div class="agenda-number">05</div>
+                        <div class="agenda-content">
+                            <h3 data-i18n="agenda.5">Infrastructure Development</h3>
+                            <p data-i18n="agenda.5.desc">Roads, water, and electricity to every corner of our constituency.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Hub Section -->
+    <section id="media" class="media">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" translate-id="media-title">Media Hub</h2>
+                <p class="section-subtitle" translate-id="media-subtitle">See leadership in action</p>
+            </div>
+            
+            <div class="media-tabs">
+                <button class="tab-btn active" data-tab="gallery" translate-id="tab-gallery">Gallery</button>
+                <button class="tab-btn" data-tab="videos" translate-id="tab-videos">Videos</button>
+                <button class="tab-btn" data-tab="news" translate-id="tab-news">News</button>
+            </div>
+            
+            <div class="media-content">
+                <div class="tab-content active" id="gallery">
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-aos="zoom-in">
+                            <img src="./pics/images (1).jpg" alt="Community engagement">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                            <img src="./pics/images (2).jpg" alt="Project launch">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                            <img src="./pics/images (3).jpg" alt="Youth programs">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                            <img src="./pics/images (4).jpg" alt="Assembly session">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="videos">
+                    <div class="video-grid">
+                        <div class="video-item" data-aos="fade-up">
+                            <div class="video-thumbnail">
+                                <img src="./pics/images.jpg" alt="A Day with MCA Violet">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <h3>A Day with MCA Violet Makhanu</h3>
+                            <p>Follow me through a typical day serving the people of Mihuu Ward.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="news">
+                    <div class="news-grid">
+                        <article class="news-item" data-aos="fade-up">
+                            <div class="news-date">Dec 15, 2024</div>
+                            <h3>New Borehole Project Launched in Mihuu</h3>
+                            <p>Another milestone in our commitment to providing clean water access to every family in Mihuu Ward.</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </article>
+                        <article class="news-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="news-date">Dec 10, 2024</div>
+                            <h3>Youth Football Tournament Success</h3>
+                            <p>Over 200 young people participated in our annual football tournament, showcasing local talent.</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" translate-id="contact-title">Stay Connected</h2>
+                <p class="section-subtitle" translate-id="contact-subtitle">Your voice matters. I'm here to listen.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 translate-id="contact-office">Office Location</h3>
+                            <p>Mihuu Ward Offices<br>Bungoma County, Kenya</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 translate-id="contact-phone">Phone</h3>
+                            <p>+254 700 000 000</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 translate-id="contact-email">Email</h3>
+                            <p>violet@mihuu.go.ke</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name" translate-id="form-name">Your Name</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email" translate-id="form-email">Email Address</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone">
+                            <label for="phone" translate-id="form-phone">Phone Number</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="subject" name="subject" required>
+                                <option value="" translate-id="form-subject">Select Subject</option>
+                                <option value="bursary">Bursary Application</option>
+                                <option value="project">Project Inquiry</option>
+                                <option value="volunteer">Volunteer Opportunity</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message" translate-id="form-message">Your Message</label>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" id="ai-assist">
+                                <i class="fas fa-robot"></i>
+                                <span translate-id="btn-ai">AI Quick Answer</span>
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                <span translate-id="btn-send">Send Message</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg" alt="Hon. Violet Makhanu">
+                        <div>
+                            <h3>Hon. Violet Makhanu</h3>
+                            <p data-i18n="footer.tagline">Service • Impact • Leadership</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 translate-id="footer-links">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#achievements">Achievements</a></li>
+                        <li><a href="#vision">Vision 2027</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 translate-id="footer-involve">Get Involved</h4>
+                    <ul>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#media">Media</a></li>
+                        <li><a href="#volunteer">Volunteer</a></li>
+                        <li><a href="#events">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 translate-id="footer-connect">Connect</h4>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2024 Hon. Violet Makhanu. All rights reserved.</p>
+                <p data-i18n="footer.built">Built with ❤️ for the people of Mihuu Ward</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chat Assistant -->
+    <div class="ai-chat" id="ai-chat">
+        <div class="chat-header">
+            <div class="chat-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="chat-info">
+                <h4 translate-id="chat-title">Violet AI Assistant</h4>
+                <span class="chat-status" translate-id="chat-status">Online</span>
+            </div>
+            <button class="chat-minimize" id="chat-minimize">
+                <i class="fas fa-minus"></i>
+            </button>
+        </div>
+        
+        <div class="chat-body" id="chat-body">
+            <div class="chat-message bot">
+                <div class="message-content">
+                    <p data-i18n="chat.welcome">Hello! I'm Violet's AI assistant. How can I help you learn more about Hon. Violet Makhanu and her work in Mihuu Ward?</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input">
+            <input type="text" id="chat-input" translate-id="chat-placeholder" placeholder="Ask me anything...">
+            <button id="chat-send"><i class="fas fa-paper-plane"></i></button>
+            <button id="chat-voice"><i class="fas fa-microphone"></i></button>
+        </div>
+    </div>
+
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle" id="chat-toggle">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/particles.js"></script>
+    <script src="./assets/js/ai-chat.js"></script>
+    <script src="./assets/js/translate.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

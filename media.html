@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Hub - Hon. Violet Makhanu | Gallery & News</title>
+    <meta name="description" content="Media gallery, videos, and latest news from Hon. Violet Makhanu - MCA Mihuu Ward. See leadership in action.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="dark-mode">
+    <div class="scroll-progress"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg" alt="Hon. Violet Makhanu" class="nav-avatar">
+                <span class="nav-name">Hon. Violet Makhanu</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" translate-id="nav-home">Home</a>
+                <a href="about.html" class="nav-link" translate-id="nav-about">About</a>
+                <a href="achievements.html" class="nav-link" translate-id="nav-achievements">Achievements</a>
+                <a href="vision.html" class="nav-link" translate-id="nav-vision">Vision 2027</a>
+                <a href="media.html" class="nav-link active" translate-id="nav-media">Media</a>
+                <a href="contact.html" class="nav-link" translate-id="nav-contact">Contact</a>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Media Hero -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-background">
+            <div class="particles-container" id="particles"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text" data-aos="fade-up" style="text-align: center;">
+                    <h1 class="hero-title" translate-id="media-title">Media Hub</h1>
+                    <p class="hero-subtitle" translate-id="media-subtitle">See leadership in action</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Tabs -->
+    <section style="padding: 4rem 0;">
+        <div class="container">
+            <div class="media-tabs">
+                <button class="tab-btn active" data-tab="gallery" translate-id="tab-gallery">Gallery</button>
+                <button class="tab-btn" data-tab="videos" translate-id="tab-videos">Videos</button>
+                <button class="tab-btn" data-tab="news" translate-id="tab-news">News</button>
+            </div>
+            
+            <div class="media-content">
+                <!-- Gallery Tab -->
+                <div class="tab-content active" id="gallery">
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-aos="zoom-in">
+                            <img src="./pics/images (1).jpg" alt="Community engagement">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                                <p>Community Engagement</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                            <img src="./pics/images (2).jpg" alt="Project launch">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                                <p>Project Launch</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                            <img src="./pics/images (3).jpg" alt="Youth programs">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                                <p>Youth Programs</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                            <img src="./pics/images (4).jpg" alt="Assembly session">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                                <p>Assembly Session</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                            <img src="./pics/images.jpg" alt="Community meeting">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                                <p>Community Meeting</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+                            <img src="./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg" alt="Official portrait">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                                <p>Official Portrait</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Videos Tab -->
+                <div class="tab-content" id="videos">
+                    <div class="video-grid">
+                        <div class="video-item" data-aos="fade-up">
+                            <div class="video-thumbnail">
+                                <img src="./pics/images.jpg" alt="A Day with MCA Violet">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div style="padding: 1.5rem;">
+                                <h3>A Day with MCA Violet Makhanu</h3>
+                                <p>Follow me through a typical day serving the people of Mihuu Ward - from office meetings to community visits.</p>
+                                <div style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.875rem;">
+                                    <i class="fas fa-calendar"></i> December 15, 2024 • 
+                                    <i class="fas fa-clock"></i> 8:32 min
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="video-thumbnail">
+                                <img src="./pics/images (1).jpg" alt="Borehole Project Launch">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div style="padding: 1.5rem;">
+                                <h3>Borehole Project Launch</h3>
+                                <p>Launching another clean water project in Mihuu Ward, bringing safe water closer to our families.</p>
+                                <div style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.875rem;">
+                                    <i class="fas fa-calendar"></i> December 10, 2024 • 
+                                    <i class="fas fa-clock"></i> 5:45 min
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="video-thumbnail">
+                                <img src="./pics/images (2).jpg" alt="Youth Football Tournament">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div style="padding: 1.5rem;">
+                                <h3>Youth Football Tournament</h3>
+                                <p>Highlights from our annual youth football tournament, showcasing local talent and promoting unity.</p>
+                                <div style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.875rem;">
+                                    <i class="fas fa-calendar"></i> November 28, 2024 • 
+                                    <i class="fas fa-clock"></i> 12:15 min
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- News Tab -->
+                <div class="tab-content" id="news">
+                    <div class="news-grid">
+                        <article class="news-item" data-aos="fade-up">
+                            <div class="news-date">Dec 15, 2024</div>
+                            <div style="padding: 1.5rem;">
+                                <h3>New Borehole Project Launched in Mihuu</h3>
+                                <p>Another milestone in our commitment to providing clean water access to every family in Mihuu Ward. The new borehole will serve over 200 households in the Kimilili area.</p>
+                                <div style="margin-top: 1rem;">
+                                    <span style="background: var(--primary); color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">Water Projects</span>
+                                    <span style="background: var(--accent); color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; margin-left: 0.5rem;">Community</span>
+                                </div>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                        
+                        <article class="news-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="news-date">Dec 10, 2024</div>
+                            <div style="padding: 1.5rem;">
+                                <h3>Youth Football Tournament Success</h3>
+                                <p>Over 200 young people participated in our annual football tournament, showcasing local talent and promoting peace and unity in our community.</p>
+                                <div style="margin-top: 1rem;">
+                                    <span style="background: var(--secondary); color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">Youth</span>
+                                    <span style="background: var(--warning); color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; margin-left: 0.5rem;">Sports</span>
+                                </div>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                        
+                        <article class="news-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="news-date">Dec 5, 2024</div>
+                            <div style="padding: 1.5rem;">
+                                <h3>Bursary Distribution for 2024</h3>
+                                <p>Successfully distributed bursaries to 150 students across Mihuu Ward, ensuring no child is left behind due to financial constraints.</p>
+                                <div style="margin-top: 1rem;">
+                                    <span style="background: var(--accent); color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">Education</span>
+                                    <span style="background: var(--primary); color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; margin-left: 0.5rem;">Bursary</span>
+                                </div>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                        
+                        <article class="news-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="news-date">Nov 28, 2024</div>
+                            <div style="padding: 1.5rem;">
+                                <h3>Road Improvement Project Completed</h3>
+                                <p>The Mihuu-Kimilili road improvement project has been completed, enhancing connectivity and boosting economic activities in the region.</p>
+                                <div style="margin-top: 1rem;">
+                                    <span style="background: var(--warning); color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">Infrastructure</span>
+                                    <span style="background: var(--secondary); color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; margin-left: 0.5rem;">Roads</span>
+                                </div>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                        
+                        <article class="news-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="news-date">Nov 20, 2024</div>
+                            <div style="padding: 1.5rem;">
+                                <h3>Healthcare Equipment Donation</h3>
+                                <p>Donated modern medical equipment to Mihuu Dispensary, improving healthcare services for our community members.</p>
+                                <div style="margin-top: 1rem;">
+                                    <span style="background: var(--error); color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">Healthcare</span>
+                                    <span style="background: var(--accent); color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; margin-left: 0.5rem;">Equipment</span>
+                                </div>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                        
+                        <article class="news-item" data-aos="fade-up" data-aos-delay="500">
+                            <div class="news-date">Nov 15, 2024</div>
+                            <div style="padding: 1.5rem;">
+                                <h3>Vision 2027 Community Consultations</h3>
+                                <p>Conducting community consultations across Mihuu Ward to gather input for the Vision 2027 parliamentary agenda.</p>
+                                <div style="margin-top: 1rem;">
+                                    <span style="background: var(--primary); color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">Vision 2027</span>
+                                    <span style="background: var(--secondary); color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; margin-left: 0.5rem;">Consultation</span>
+                                </div>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg" alt="Hon. Violet Makhanu">
+                        <div>
+                            <h3>Hon. Violet Makhanu</h3>
+                            <p translate-id="footer-tagline">Service • Impact • Leadership</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 translate-id="footer-links">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="achievements.html">Achievements</a></li>
+                        <li><a href="vision.html">Vision 2027</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 translate-id="footer-involve">Get Involved</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="media.html">Media</a></li>
+                        <li><a href="#volunteer">Volunteer</a></li>
+                        <li><a href="#events">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 translate-id="footer-connect">Connect</h4>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hon. Violet Makhanu. All rights reserved.</p>
+                <p>Built with ❤️ for the people of Mihuu Ward</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/particles.js"></script>
+    <script src="./assets/js/translate.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

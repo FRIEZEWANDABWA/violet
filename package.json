@@ -1,0 +1,43 @@
+{
+  "name": "violet-makhanu-website",
+  "version": "1.0.0",
+  "description": "Official website for Hon. Violet Makhanu - MCA Mihuu Ward, Bungoma County",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx serve .",
+    "build": "echo 'Static site - no build process needed'",
+    "deploy": "netlify deploy --prod --dir=."
+  },
+  "keywords": [
+    "violet-makhanu",
+    "mca",
+    "mihuu-ward",
+    "bungoma-county",
+    "politics",
+    "kenya",
+    "leadership",
+    "website"
+  ],
+  "author": {
+    "name": "Ozone IT System Ltd",
+    "email": "info@ozoneitsystem.co.ke",
+    "url": "https://ozoneitsystem.netlify.app"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FRIEZEWANDABWA/violet.git"
+  },
+  "homepage": "https://violetmakhanu.netlify.app",
+  "bugs": {
+    "url": "https://github.com/FRIEZEWANDABWA/violet/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}
