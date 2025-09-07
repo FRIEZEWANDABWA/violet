@@ -79,25 +79,37 @@ class VioletWebsite {
 
     setupNavigation() {
         const navToggle = document.getElementById('nav-toggle');
-        const navMenu = document.getElementById('nav-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
         const navLinks = document.querySelectorAll('.nav-link');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
         // Mobile menu toggle
-        if (navToggle && navMenu) {
+        if (navToggle && mobileMenu) {
             navToggle.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                navMenu.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
                 navToggle.classList.toggle('active');
-                document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
             });
         }
 
+        // Close mobile menu when clicking on links
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileMenu && navToggle) {
+                    mobileMenu.classList.remove('active');
+                    navToggle.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
-            if (navMenu && navMenu.classList.contains('active') && 
-                !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-                navMenu.classList.remove('active');
+            if (mobileMenu && mobileMenu.classList.contains('active') && 
+                !mobileMenu.contains(e.target) && !navToggle.contains(e.target)) {
+                mobileMenu.classList.remove('active');
                 navToggle.classList.remove('active');
                 document.body.style.overflow = '';
             }
@@ -158,11 +170,10 @@ class VioletWebsite {
     }
 
     handleNavbarScroll() {
+        // Keep navbar always visible - no hiding on scroll
         const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
+        if (navbar) {
             navbar.style.background = 'rgba(10, 10, 10, 0.98)';
-        } else {
-            navbar.style.background = 'rgba(10, 10, 10, 0.95)';
         }
     }
 
