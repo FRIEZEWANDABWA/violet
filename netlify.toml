@@ -40,11 +40,31 @@
     Cache-Control = "public, max-age=31536000"
 
 [[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/achievements"
+  to = "/achievements.html"
+  status = 200
+
+[[redirects]]
+  from = "/vision"
+  to = "/vision.html"
+  status = 200
+
+[[redirects]]
+  from = "/media"
+  to = "/media.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
   from = "/home"
   to = "/"
   status = 301
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 404
