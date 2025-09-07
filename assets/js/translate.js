@@ -45,7 +45,28 @@ const translations = {
         'footer-connect': 'Connect',
         'chat-title': 'Violet AI Assistant',
         'chat-status': 'Online',
-        'chat-placeholder': 'Ask me anything...'
+        'chat-placeholder': 'Ask me anything...',
+        'story1-title': 'Born to Serve',
+        'story1-text': 'Born and raised in Mihuu, I know firsthand the struggles of everyday citizens. Before leadership, I was a small-scale trader and tailor, working hard to provide for my family. But I always carried a dream bigger than myself: to serve my people and transform our community.',
+        'story2-title': 'The Journey Begins',
+        'story2-text': 'That dream became reality in 2013 when I was nominated MCA. In 2017, you entrusted me with your votes—and again in 2022. Each step has been fueled by your faith and my unwavering commitment to service.',
+        'quote': 'Leadership is not about titles—it\'s about service, integrity, and leaving no one behind.',
+        'timeline-2013': 'Nominated MCA',
+        'timeline-2017': 'Elected MCA',
+        'timeline-2022': 'Re-elected MCA',
+        'timeline-2027': 'Parliament Bound',
+        'roads': 'Road Networks',
+        'water': 'Clean Water Access',
+        'health': 'Healthcare Facilities',
+        'education': 'Education Support',
+        'land': 'Land Rights',
+        'youth': 'Youth Programs',
+        'vision-intro': 'Leadership doesn\'t stop at the ward level. My mission is to take Mihuu\'s voice to Parliament, where bigger policies and larger resources can transform our lives.',
+        'agenda1': 'Education First',
+        'agenda2': 'Youth Empowerment',
+        'agenda3': 'Healthcare for All',
+        'agenda4': 'Agriculture & Jobs',
+        'agenda5': 'Infrastructure Development'
     },
     sw: {
         'nav-home': 'Nyumbani',
@@ -90,7 +111,28 @@ const translations = {
         'footer-connect': 'Unganisha',
         'chat-title': 'Msaidizi wa AI wa Violet',
         'chat-status': 'Mtandaoni',
-        'chat-placeholder': 'Niulize chochote...'
+        'chat-placeholder': 'Niulize chochote...',
+        'story1-title': 'Nizaliwa Kutumikia',
+        'story1-text': 'Nilizaliwa na kulelewa Mihuu, najua mapambano ya kila siku ya raia wa kawaida. Kabla ya uongozi, nilikuwa mfanyabiashara mdogo na mshonaji, nikifanya kazi kwa bidii kutoa mahitaji ya familia yangu.',
+        'story2-title': 'Safari Inaanza',
+        'story2-text': 'Ndoto hiyo ikawa ukweli mnamo 2013 nilipoteuliwa MCA. Mnamo 2017, mliniamini kura zenu—na tena mnamo 2022. Kila hatua imechukuliwa na imani yenu.',
+        'quote': 'Uongozi si kuhusu majina—ni kuhusu huduma, uongozi, na kutowaacha mtu yeyote nyuma.',
+        'timeline-2013': 'MCA Aliyeteuliwa',
+        'timeline-2017': 'MCA Aliyechaguliwa',
+        'timeline-2022': 'MCA Aliyechaguliwa Tena',
+        'timeline-2027': 'Njiani Bungeni',
+        'roads': 'Mitandao ya Barabara',
+        'water': 'Upatikanaji wa Maji Safi',
+        'health': 'Vituo vya Afya',
+        'education': 'Msaada wa Elimu',
+        'land': 'Haki za Ardhi',
+        'youth': 'Mipango ya Vijana',
+        'vision-intro': 'Uongozi hauishii kiwango cha ward. Dhamira yangu ni kuchukua sauti ya Mihuu Bungeni, ambapo sera kubwa na rasilimali kubwa zinaweza kubadilisha maisha yetu.',
+        'agenda1': 'Elimu Kwanza',
+        'agenda2': 'Uwezeshaji wa Vijana',
+        'agenda3': 'Afya kwa Wote',
+        'agenda4': 'Kilimo na Kazi',
+        'agenda5': 'Maendeleo ya Miundombinu'
     }
 };
 
@@ -119,7 +161,36 @@ function toggleLanguage() {
     }
 }
 
-// Add language toggle button
+function setupMobileNav() {
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on links
+        const navLinks = navMenu.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            }
+        });
+    }
+}
+
+// Add language toggle button and setup mobile nav
 document.addEventListener('DOMContentLoaded', () => {
     const navActions = document.querySelector('.nav-actions');
     if (navActions) {
@@ -135,8 +206,12 @@ document.addEventListener('DOMContentLoaded', () => {
             cursor: pointer;
             font-weight: 600;
             margin-left: 0.5rem;
+            min-height: 44px;
         `;
         langBtn.onclick = toggleLanguage;
         navActions.appendChild(langBtn);
     }
+    
+    // Setup mobile navigation
+    setupMobileNav();
 });
