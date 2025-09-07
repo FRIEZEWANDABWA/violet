@@ -93,25 +93,26 @@ class VioletWebsite {
             link.addEventListener('click', (e) => {
                 const href = link.getAttribute('href');
                 
-                // Only prevent default for same-page links (starting with #)
-                if (href.startsWith('#')) {
+                // Only handle same-page links (starting with #)
+                if (href && href.startsWith('#')) {
                     e.preventDefault();
                     const targetId = href.substring(1);
                     const targetSection = document.getElementById(targetId);
                     
                     if (targetSection) {
-                        const offsetTop = targetSection.offsetTop - 70; // Account for fixed navbar
+                        const offsetTop = targetSection.offsetTop - 70;
                         window.scrollTo({
                             top: offsetTop,
                             behavior: 'smooth'
                         });
                     }
                 }
+                // For HTML files (.html), let browser handle normally
 
                 // Close mobile menu for all links
-                if (navMenu.classList.contains('active')) {
+                if (navMenu && navMenu.classList.contains('active')) {
                     navMenu.classList.remove('active');
-                    navToggle.classList.remove('active');
+                    if (navToggle) navToggle.classList.remove('active');
                 }
             });
         });
