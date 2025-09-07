@@ -66,7 +66,7 @@ class OzoneWebsite {
     // Theme Management
     initTheme() {
         const themeToggle = document.getElementById('themeToggle');
-        const savedTheme = localStorage.getItem('theme') || 'dark';
+        const savedTheme = localStorage.getItem('theme') || 'light';
         
         this.setTheme(savedTheme);
         
