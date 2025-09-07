@@ -50,6 +50,35 @@
         }
     </script>
     
+    <!-- Override any conflicting styles -->
+    <style>
+        /* Reset any conflicting styles */
+        * {
+            filter: none !important;
+            backdrop-filter: none !important;
+        }
+        
+        /* Only allow backdrop blur on specific elements */
+        .backdrop-blur-md {
+            backdrop-filter: blur(12px) !important;
+        }
+        
+        .backdrop-blur-sm {
+            backdrop-filter: blur(4px) !important;
+        }
+        
+        /* Ensure no overlays are stuck */
+        .overlay, .modal-overlay, .lightbox-overlay {
+            display: none !important;
+        }
+        
+        /* Clean body styles */
+        body {
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+        }
+    </style>
+    
     <!-- PWA Manifest -->
     <link rel="manifest" href="./manifest.json">
     <meta name="theme-color" content="#2563eb">
@@ -749,13 +778,33 @@
     </div>
 
     <!-- Scripts -->
-    <script src="./assets/js/particles.js"></script>
     <script src="./assets/js/ai-chat.js"></script>
     <script src="./assets/js/translate.js"></script>
-    <script src="./assets/js/main.js"></script>
     
     <!-- Mobile Navigation Script -->
     <script>
+        // Clean initialization - remove any existing overlays
+        function cleanPage() {
+            // Remove any blur overlays
+            const overlays = document.querySelectorAll('.overlay, .modal-overlay, .lightbox-overlay, .pwa-install');
+            overlays.forEach(overlay => overlay.remove());
+            
+            // Reset body styles
+            document.body.style.overflow = '';
+            document.body.style.filter = '';
+            document.documentElement.style.filter = '';
+            
+            // Remove any backdrop blur from main content
+            const blurredElements = document.querySelectorAll('[style*="blur"]');
+            blurredElements.forEach(el => {
+                el.style.filter = '';
+                el.style.backdropFilter = '';
+            });
+        }
+        
+        // Run cleanup immediately
+        cleanPage();
+        
         // Mobile menu toggle
         document.getElementById('nav-toggle').addEventListener('click', function() {
             const mobileMenu = document.getElementById('mobile-menu');
@@ -765,6 +814,16 @@
                 mobileMenu.classList.add('-translate-y-full');
             } else {
                 mobileMenu.classList.remove('-translate-y-full');
+            }
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navToggle = document.getElementById('nav-toggle');
+            
+            if (!mobileMenu.contains(e.target) && !navToggle.contains(e.target)) {
+                mobileMenu.classList.add('-translate-y-full');
             }
         });
         
@@ -810,6 +869,9 @@
             const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
             document.getElementById('scroll-progress').style.transform = `scaleX(${scrolled / 100})`;
         });
+        
+        // Run cleanup on DOM ready as well
+        document.addEventListener('DOMContentLoaded', cleanPage);
     </script>
 </body>
 </html>
