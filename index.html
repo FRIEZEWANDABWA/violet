@@ -31,178 +31,156 @@
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#06b6d4',
+                    }
+                }
+            }
+        }
+    </script>
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="./manifest.json">
-    <meta name="theme-color" content="#1a1a1a">
-    
-    <!-- PWA Install Prompt -->
-    <style>
-        .pwa-install {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            right: 20px;
-            background: var(--primary);
-            color: white;
-            padding: 1rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            z-index: 10000;
-            display: none;
-            align-items: center;
-            gap: 1rem;
-        }
-        .pwa-install.show {
-            display: flex;
-        }
-        .pwa-install button {
-            background: white;
-            color: var(--primary);
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-        .pwa-close {
-            background: transparent !important;
-            color: white !important;
-            font-size: 1.2rem;
-            padding: 0.25rem !important;
-        }
-    </style>
+    <meta name="theme-color" content="#2563eb">
 </head>
-<body class="dark-mode">
+<body class="font-inter bg-gray-900 text-white">
     <!-- Scroll Progress Bar -->
-    <div class="scroll-progress"></div>
+    <div class="fixed top-0 left-0 w-full h-1 bg-primary z-50 transform origin-left scale-x-0 transition-transform duration-300" id="scroll-progress"></div>
     
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
-                    <img src="./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg" alt="Hon. Violet Makhanu" class="nav-avatar">
-                    <span class="nav-name">Hon. Violet Makhanu</span>
-                </a>
-            </div>
-            
-            <!-- Desktop Navigation -->
-            <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link active" translate-id="nav-home">Home</a>
-                <a href="about.html" class="nav-link" translate-id="nav-about">About</a>
-                <a href="achievements.html" class="nav-link" translate-id="nav-achievements">Achievements</a>
-                <a href="vision.html" class="nav-link" translate-id="nav-vision">Vision 2027</a>
-                <a href="media.html" class="nav-link" translate-id="nav-media">Media</a>
-                <a href="contact.html" class="nav-link" translate-id="nav-contact">Contact</a>
-                <div class="nav-actions">
-                    <button class="language-toggle" id="language-toggle">EN</button>
-                    <button class="theme-toggle" id="theme-toggle">
-                        <i class="fas fa-sun"></i>
-                    </button>
-                    <button class="voice-search" id="voice-search">
-                        <i class="fas fa-microphone"></i>
-                    </button>
+    <nav class="fixed top-0 left-0 right-0 z-40 bg-gray-900/95 backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg" alt="Hon. Violet Makhanu" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover">
+                    <span class="text-lg sm:text-xl font-bold text-white">Hon. Violet Makhanu</span>
                 </div>
-            </div>
-            
-            <!-- Mobile Controls -->
-            <div class="mobile-controls">
-                <button class="theme-toggle" id="theme-toggle-mobile">
-                    <i class="fas fa-sun"></i>
-                </button>
-                <button class="language-toggle" id="language-toggle-mobile">EN</button>
-                <div class="nav-toggle" id="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobile-menu">
-        <a href="index.html" class="mobile-nav-link active" translate-id="nav-home">Home</a>
-        <a href="about.html" class="mobile-nav-link" translate-id="nav-about">About</a>
-        <a href="achievements.html" class="mobile-nav-link" translate-id="nav-achievements">Achievements</a>
-        <a href="vision.html" class="mobile-nav-link" translate-id="nav-vision">Vision 2027</a>
-        <a href="media.html" class="mobile-nav-link" translate-id="nav-media">Media</a>
-        <a href="contact.html" class="mobile-nav-link" translate-id="nav-contact">Contact</a>
-    </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="particles-container" id="particles"></div>
-        </div>
-        
-        <div class="hero-content">
-            <div class="container">
-                <div class="hero-text" data-aos="fade-up">
-                    <h1 class="hero-title" translate-id="hero-title">
-                        From <span class="highlight">Mihuu</span> to Parliament
-                        <br>Leadership You Can <span class="highlight">Trust</span>
-                    </h1>
-                    <p class="hero-subtitle" translate-id="hero-subtitle">
-                        Impact You Can See. Service You Can Count On.
-                        <br>Your elected MCA ready to take our voice to Parliament.
-                    </p>
-                    <div class="hero-cta">
-                        <button class="btn btn-primary" onclick="scrollToSection('about')">
-                            <i class="fas fa-user"></i>
-                            <span translate-id="hero-btn1">See My Journey</span>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-primary font-semibold hover:text-accent transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-300 hover:text-white transition-colors">About</a>
+                    <a href="achievements.html" class="text-gray-300 hover:text-white transition-colors">Achievements</a>
+                    <a href="vision.html" class="text-gray-300 hover:text-white transition-colors">Vision 2027</a>
+                    <a href="media.html" class="text-gray-300 hover:text-white transition-colors">Media</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+                    
+                    <!-- Desktop Actions -->
+                    <div class="flex items-center space-x-3 ml-6">
+                        <button class="px-3 py-2 text-sm font-medium bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors" id="language-toggle">EN</button>
+                        <button class="p-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all" id="theme-toggle">
+                            <i class="fas fa-sun text-lg"></i>
                         </button>
-                        <button class="btn btn-secondary" onclick="scrollToSection('contact')">
-                            <i class="fas fa-handshake"></i>
-                            <span translate-id="hero-btn2">Join the Movement</span>
+                        <button class="p-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all" id="voice-search">
+                            <i class="fas fa-microphone text-lg"></i>
                         </button>
                     </div>
                 </div>
                 
-                <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
-                    <img src="./pics/1.jpg" alt="Hon. Violet Makhanu" class="hero-photo">
+                <!-- Mobile Controls -->
+                <div class="flex items-center space-x-3 lg:hidden">
+                    <button class="px-3 py-2 text-sm font-medium bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors" id="language-toggle-mobile">EN</button>
+                    <button class="p-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all" id="theme-toggle-mobile">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button class="p-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all" id="nav-toggle">
+                        <div class="w-6 h-6 flex flex-col justify-center items-center">
+                            <span class="block w-5 h-0.5 bg-current mb-1 transition-all"></span>
+                            <span class="block w-5 h-0.5 bg-current mb-1 transition-all"></span>
+                            <span class="block w-5 h-0.5 bg-current transition-all"></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="lg:hidden bg-gray-900/98 backdrop-blur-md border-t border-gray-800 transform -translate-y-full transition-transform duration-300" id="mobile-menu">
+            <div class="container mx-auto px-4 py-4 space-y-2">
+                <a href="index.html" class="block px-4 py-3 text-primary font-semibold bg-primary/10 rounded-lg">Home</a>
+                <a href="about.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all">About</a>
+                <a href="achievements.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all">Achievements</a>
+                <a href="vision.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all">Vision 2027</a>
+                <a href="media.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all">Media</a>
+                <a href="contact.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-16 sm:pt-20 overflow-hidden">
+        <!-- Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.02"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <!-- Hero Text -->
+                <div class="text-center lg:text-left">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        From <span class="text-primary">Mihuu</span> to Parliament<br>
+                        Leadership You Can <span class="text-accent">Trust</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0">
+                        Impact You Can See. Service You Can Count On.<br>
+                        Your elected MCA ready to take our voice to Parliament.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <button class="px-6 sm:px-8 py-3 sm:py-4 bg-primary hover:bg-secondary text-white font-semibold rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg min-h-[44px] flex items-center justify-center space-x-2">
+                            <i class="fas fa-user"></i>
+                            <span>See My Journey</span>
+                        </button>
+                        <button class="px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-white font-semibold rounded-lg transition-all duration-300 hover:-translate-y-1 min-h-[44px] flex items-center justify-center space-x-2">
+                            <i class="fas fa-handshake"></i>
+                            <span>Join the Movement</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <div class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl">
+                            <img src="./pics/1.jpg" alt="Hon. Violet Makhanu" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-xl -z-10"></div>
+                    </div>
                 </div>
             </div>
         </div>
         
         <!-- KPI Cards -->
-        <div class="kpi-section" data-aos="fade-up" data-aos-delay="400">
-            <div class="container">
-                <div class="kpi-grid">
-                    <div class="kpi-card">
-                        <div class="kpi-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="kpi-number" data-count="10">0</div>
-                        <div class="kpi-label" translate-id="kpi-schools">Schools Supported</div>
+        <div class="absolute bottom-0 left-0 right-0 bg-gray-800/50 backdrop-blur-md border-t border-gray-700">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                    <div class="text-center">
+                        <div class="text-2xl sm:text-3xl font-bold text-primary mb-1" data-count="10">10</div>
+                        <div class="text-sm sm:text-base text-gray-300">Schools Supported</div>
                     </div>
-                    <div class="kpi-card">
-                        <div class="kpi-icon">
-                            <i class="fas fa-hospital"></i>
-                        </div>
-                        <div class="kpi-number" data-count="5">0</div>
-                        <div class="kpi-label" translate-id="kpi-dispensaries">Dispensaries Built</div>
+                    <div class="text-center">
+                        <div class="text-2xl sm:text-3xl font-bold text-accent mb-1" data-count="5">5</div>
+                        <div class="text-sm sm:text-base text-gray-300">Dispensaries Built</div>
                     </div>
-                    <div class="kpi-card">
-                        <div class="kpi-icon">
-                            <i class="fas fa-tint"></i>
-                        </div>
-                        <div class="kpi-number" data-count="1000">0</div>
-                        <div class="kpi-label" translate-id="kpi-families">Families Connected to Water</div>
+                    <div class="text-center">
+                        <div class="text-2xl sm:text-3xl font-bold text-primary mb-1" data-count="1000">1000+</div>
+                        <div class="text-sm sm:text-base text-gray-300">Families Connected</div>
                     </div>
-                    <div class="kpi-card">
-                        <div class="kpi-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="kpi-number" data-count="3">0</div>
-                        <div class="kpi-label" translate-id="kpi-terms">Terms as MCA</div>
+                    <div class="text-center">
+                        <div class="text-2xl sm:text-3xl font-bold text-accent mb-1" data-count="3">3</div>
+                        <div class="text-sm sm:text-base text-gray-300">Terms as MCA</div>
                     </div>
                 </div>
             </div>
@@ -210,58 +188,80 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title" translate-id="about-title">My Story</h2>
-                <p class="section-subtitle" translate-id="about-subtitle">From humble beginnings to servant leadership</p>
+    <section class="py-16 sm:py-20 lg:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">My Story</h2>
+                <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">From humble beginnings to servant leadership</p>
             </div>
             
-            <div class="about-content">
-                <div class="about-text" data-aos="fade-right">
-                    <div class="story-card">
-                        <h3 translate-id="story1-title">Born to Serve</h3>
-                        <p translate-id="story1-text">Born and raised in Mihuu, I know firsthand the struggles of everyday citizens. Before leadership, I was a small-scale trader and tailor, working hard to provide for my family. But I always carried a dream bigger than myself: to serve my people and transform our community.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                <!-- Story Content -->
+                <div class="space-y-8">
+                    <div class="bg-gray-700/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-600">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4 text-primary">Born to Serve</h3>
+                        <p class="text-gray-300 leading-relaxed">Born and raised in Mihuu, I know firsthand the struggles of everyday citizens. Before leadership, I was a small-scale trader and tailor, working hard to provide for my family. But I always carried a dream bigger than myself: to serve my people and transform our community.</p>
                     </div>
                     
-                    <div class="story-card">
-                        <h3 translate-id="story2-title">The Journey Begins</h3>
-                        <p translate-id="story2-text">That dream became reality in 2013 when I was nominated MCA. In 2017, you entrusted me with your votes—and again in 2022. Each step has been fueled by your faith and my unwavering commitment to service.</p>
+                    <div class="bg-gray-700/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-600">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4 text-accent">The Journey Begins</h3>
+                        <p class="text-gray-300 leading-relaxed">That dream became reality in 2013 when I was nominated MCA. In 2017, you entrusted me with your votes—and again in 2022. Each step has been fueled by your faith and my unwavering commitment to service.</p>
                     </div>
                     
-                    <blockquote class="pull-quote" translate-id="quote">
-                        "Leadership is not about titles—it's about service, integrity, and leaving no one behind."
+                    <blockquote class="bg-gradient-to-r from-primary/10 to-accent/10 border-l-4 border-primary p-6 sm:p-8 rounded-r-xl">
+                        <p class="text-lg sm:text-xl font-medium italic text-white">
+                            "Leadership is not about titles—it's about service, integrity, and leaving no one behind."
+                        </p>
                     </blockquote>
                 </div>
                 
-                <div class="about-visual" data-aos="fade-left">
-                    <div class="timeline">
-                        <div class="timeline-item active">
-                            <div class="timeline-year">2013</div>
-                            <div class="timeline-content">
-                                <h4 translate-id="timeline-2013">Nominated MCA</h4>
-                                <p>Started my leadership journey under ODM</p>
+                <!-- Timeline -->
+                <div class="relative">
+                    <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary"></div>
+                    
+                    <div class="space-y-8">
+                        <div class="relative flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-primary rounded-full border-4 border-gray-800 flex items-center justify-center">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                            </div>
+                            <div class="ml-6 bg-gray-700/50 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-gray-600 flex-1">
+                                <div class="text-primary font-bold text-lg mb-1">2013</div>
+                                <h4 class="font-semibold text-white mb-2">Nominated MCA</h4>
+                                <p class="text-gray-300 text-sm">Started my leadership journey under ODM</p>
                             </div>
                         </div>
-                        <div class="timeline-item active">
-                            <div class="timeline-year">2017</div>
-                            <div class="timeline-content">
-                                <h4 translate-id="timeline-2017">Elected MCA</h4>
-                                <p>Delivered tangible development projects</p>
+                        
+                        <div class="relative flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-accent rounded-full border-4 border-gray-800 flex items-center justify-center">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                            </div>
+                            <div class="ml-6 bg-gray-700/50 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-gray-600 flex-1">
+                                <div class="text-accent font-bold text-lg mb-1">2017</div>
+                                <h4 class="font-semibold text-white mb-2">Elected MCA</h4>
+                                <p class="text-gray-300 text-sm">Delivered tangible development projects</p>
                             </div>
                         </div>
-                        <div class="timeline-item active">
-                            <div class="timeline-year">2022</div>
-                            <div class="timeline-content">
-                                <h4 translate-id="timeline-2022">Re-elected MCA</h4>
-                                <p>Chairperson of Youth Affairs & Sports Committee</p>
+                        
+                        <div class="relative flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-primary rounded-full border-4 border-gray-800 flex items-center justify-center">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                            </div>
+                            <div class="ml-6 bg-gray-700/50 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-gray-600 flex-1">
+                                <div class="text-primary font-bold text-lg mb-1">2022</div>
+                                <h4 class="font-semibold text-white mb-2">Re-elected MCA</h4>
+                                <p class="text-gray-300 text-sm">Chairperson of Youth Affairs & Sports Committee</p>
                             </div>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-year">2027</div>
-                            <div class="timeline-content">
-                                <h4 translate-id="timeline-2027">Parliament Bound</h4>
-                                <p>Ready to take Mihuu's voice to the next level</p>
+                        
+                        <div class="relative flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-accent rounded-full border-4 border-gray-800 flex items-center justify-center animate-pulse">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                            </div>
+                            <div class="ml-6 bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-primary/30 flex-1">
+                                <div class="text-accent font-bold text-lg mb-1">2027</div>
+                                <h4 class="font-semibold text-white mb-2">Parliament Bound</h4>
+                                <p class="text-gray-300 text-sm">Ready to take Mihuu's voice to the next level</p>
                             </div>
                         </div>
                     </div>
@@ -271,118 +271,143 @@
     </section>
 
     <!-- Achievements Section -->
-    <section id="achievements" class="achievements">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title" translate-id="achievements-title">Proven Impact</h2>
-                <p class="section-subtitle" translate-id="achievements-subtitle">Tangible results that speak for themselves</p>
+    <section class="py-16 sm:py-20 lg:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Proven Impact</h2>
+                <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">Tangible results that speak for themselves</p>
             </div>
             
-            <div class="achievements-grid">
-                <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="achievement-icon">
-                        <i class="fas fa-road"></i>
+            <!-- Achievements Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div class="group bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary/30 transition-colors">
+                        <i class="fas fa-road text-primary text-xl sm:text-2xl"></i>
                     </div>
-                    <h3 translate-id="roads">Road Networks</h3>
-                    <p>Improved road infrastructure across Mihuu Ward, connecting communities and boosting economic activities.</p>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3 text-white">Road Networks</h3>
+                    <p class="text-gray-300 leading-relaxed">Improved road infrastructure across Mihuu Ward, connecting communities and boosting economic activities.</p>
                 </div>
                 
-                <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="achievement-icon">
-                        <i class="fas fa-tint"></i>
+                <div class="group bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-accent/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-accent/20 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-accent/30 transition-colors">
+                        <i class="fas fa-tint text-accent text-xl sm:text-2xl"></i>
                     </div>
-                    <h3 translate-id="water">Clean Water Access</h3>
-                    <p>Expanded access to clean water through strategic borehole projects, serving over 1000 families.</p>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3 text-white">Clean Water Access</h3>
+                    <p class="text-gray-300 leading-relaxed">Expanded access to clean water through strategic borehole projects, serving over 1000 families.</p>
                 </div>
                 
-                <div class="achievement-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="achievement-icon">
-                        <i class="fas fa-hospital"></i>
+                <div class="group bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary/30 transition-colors">
+                        <i class="fas fa-hospital text-primary text-xl sm:text-2xl"></i>
                     </div>
-                    <h3 translate-id="health">Healthcare Facilities</h3>
-                    <p>Construction and upgrade of dispensaries for better healthcare access across the ward.</p>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3 text-white">Healthcare Facilities</h3>
+                    <p class="text-gray-300 leading-relaxed">Construction and upgrade of dispensaries for better healthcare access across the ward.</p>
                 </div>
                 
-                <div class="achievement-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="achievement-icon">
-                        <i class="fas fa-graduation-cap"></i>
+                <div class="group bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-accent/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-accent/20 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-accent/30 transition-colors">
+                        <i class="fas fa-graduation-cap text-accent text-xl sm:text-2xl"></i>
                     </div>
-                    <h3 translate-id="education">Education Support</h3>
-                    <p>Fair and transparent bursary distribution, supporting over 10 schools and hundreds of students.</p>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3 text-white">Education Support</h3>
+                    <p class="text-gray-300 leading-relaxed">Fair and transparent bursary distribution, supporting over 10 schools and hundreds of students.</p>
                 </div>
                 
-                <div class="achievement-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="achievement-icon">
-                        <i class="fas fa-mountain"></i>
+                <div class="group bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary/30 transition-colors">
+                        <i class="fas fa-mountain text-primary text-xl sm:text-2xl"></i>
                     </div>
-                    <h3 translate-id="land">Land Rights</h3>
-                    <p>Strong voice in defending community land and heritage, including the protection of Chetambe Hills.</p>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3 text-white">Land Rights</h3>
+                    <p class="text-gray-300 leading-relaxed">Strong voice in defending community land and heritage, including the protection of Chetambe Hills.</p>
                 </div>
                 
-                <div class="achievement-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="achievement-icon">
-                        <i class="fas fa-futbol"></i>
+                <div class="group bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-accent/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-accent/20 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-accent/30 transition-colors">
+                        <i class="fas fa-futbol text-accent text-xl sm:text-2xl"></i>
                     </div>
-                    <h3 translate-id="youth">Youth Programs</h3>
-                    <p>Football tournaments, mentorship programs, and skills training for youth empowerment.</p>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3 text-white">Youth Programs</h3>
+                    <p class="text-gray-300 leading-relaxed">Football tournaments, mentorship programs, and skills training for youth empowerment.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Vision 2027 Section -->
-    <section id="vision" class="vision">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title" translate-id="vision-title">Vision 2027 & Beyond</h2>
-                <p class="section-subtitle" translate-id="vision-subtitle">Taking Mihuu's voice to Parliament</p>
+    <section class="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-800 to-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Vision 2027 & Beyond</h2>
+                <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">Taking Mihuu's voice to Parliament</p>
             </div>
             
-            <div class="vision-content">
-                <div class="vision-intro" data-aos="fade-up">
-                    <p class="vision-text" translate-id="vision-intro">
+            <!-- Vision Intro -->
+            <div class="max-w-4xl mx-auto mb-12 sm:mb-16">
+                <div class="bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur-sm p-6 sm:p-8 lg:p-10 rounded-2xl border border-primary/20">
+                    <p class="text-lg sm:text-xl text-gray-200 leading-relaxed text-center">
                         Leadership doesn't stop at the ward level. My mission is to take Mihuu's voice to Parliament, where bigger policies and larger resources can transform our lives. As your next MP, I envision a constituency where every child gets an education, every youth has a job or skill, and every family enjoys better healthcare and infrastructure.
                     </p>
                 </div>
+            </div>
+            
+            <!-- Agenda Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div class="group bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform">
+                            01
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg sm:text-xl font-bold mb-3 text-white">Education First</h3>
+                            <p class="text-gray-300 leading-relaxed">More bursaries, scholarships, and digital learning hubs for our children's future.</p>
+                        </div>
+                    </div>
+                </div>
                 
-                <div class="agenda-grid">
-                    <div class="agenda-item" data-aos="fade-up" data-aos-delay="100">
-                        <div class="agenda-number">01</div>
-                        <div class="agenda-content">
-                            <h3 translate-id="agenda1">Education First</h3>
-                            <p>More bursaries, scholarships, and digital learning hubs for our children's future.</p>
+                <div class="group bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-accent/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-accent rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform">
+                            02
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg sm:text-xl font-bold mb-3 text-white">Youth Empowerment</h3>
+                            <p class="text-gray-300 leading-relaxed">Vocational training, sports development, and start-up funding for our youth.</p>
                         </div>
                     </div>
-                    
-                    <div class="agenda-item" data-aos="fade-up" data-aos-delay="200">
-                        <div class="agenda-number">02</div>
-                        <div class="agenda-content">
-                            <h3 translate-id="agenda2">Youth Empowerment</h3>
-                            <p>Vocational training, sports development, and start-up funding for our youth.</p>
+                </div>
+                
+                <div class="group bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform">
+                            03
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg sm:text-xl font-bold mb-3 text-white">Healthcare for All</h3>
+                            <p class="text-gray-300 leading-relaxed">Modern facilities and expanded dispensaries across every village.</p>
                         </div>
                     </div>
-                    
-                    <div class="agenda-item" data-aos="fade-up" data-aos-delay="300">
-                        <div class="agenda-number">03</div>
-                        <div class="agenda-content">
-                            <h3 translate-id="agenda3">Healthcare for All</h3>
-                            <p>Modern facilities and expanded dispensaries across every village.</p>
+                </div>
+                
+                <div class="group bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-accent/50 transition-all duration-300 hover:-translate-y-1">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-accent rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform">
+                            04
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg sm:text-xl font-bold mb-3 text-white">Agriculture & Jobs</h3>
+                            <p class="text-gray-300 leading-relaxed">Support for farmers, market access, and investment in agribusiness.</p>
                         </div>
                     </div>
-                    
-                    <div class="agenda-item" data-aos="fade-up" data-aos-delay="400">
-                        <div class="agenda-number">04</div>
-                        <div class="agenda-content">
-                            <h3 translate-id="agenda4">Agriculture & Jobs</h3>
-                            <p>Support for farmers, market access, and investment in agribusiness.</p>
+                </div>
+                
+                <div class="group bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 sm:col-span-2 lg:col-span-1">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform">
+                            05
                         </div>
-                    </div>
-                    
-                    <div class="agenda-item" data-aos="fade-up" data-aos-delay="500">
-                        <div class="agenda-number">05</div>
-                        <div class="agenda-content">
-                            <h3 translate-id="agenda5">Infrastructure Development</h3>
-                            <p>Roads, water, and electricity to every corner of our constituency.</p>
+                        <div class="flex-1">
+                            <h3 class="text-lg sm:text-xl font-bold mb-3 text-white">Infrastructure Development</h3>
+                            <p class="text-gray-300 leading-relaxed">Roads, water, and electricity to every corner of our constituency.</p>
                         </div>
                     </div>
                 </div>
@@ -391,164 +416,183 @@
     </section>
 
     <!-- Media Hub Section -->
-    <section id="media" class="media">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title" translate-id="media-title">Media Hub</h2>
-                <p class="section-subtitle" translate-id="media-subtitle">See leadership in action</p>
+    <section class="py-16 sm:py-20 lg:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Media Hub</h2>
+                <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">See leadership in action</p>
             </div>
             
-            <div class="media-tabs">
-                <button class="tab-btn active" data-tab="gallery" translate-id="tab-gallery">Gallery</button>
-                <button class="tab-btn" data-tab="videos" translate-id="tab-videos">Videos</button>
-                <button class="tab-btn" data-tab="news" translate-id="tab-news">News</button>
+            <!-- Media Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12">
+                <button class="px-4 sm:px-6 py-2 sm:py-3 bg-primary text-white font-semibold rounded-lg transition-all duration-300 min-h-[44px]" data-tab="gallery">Gallery</button>
+                <button class="px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white font-semibold rounded-lg transition-all duration-300 min-h-[44px]" data-tab="videos">Videos</button>
+                <button class="px-4 sm:px-6 py-2 sm:py-3 bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white font-semibold rounded-lg transition-all duration-300 min-h-[44px]" data-tab="news">News</button>
             </div>
             
-            <div class="media-content">
-                <div class="tab-content active" id="gallery">
-                    <div class="gallery-grid">
-                        <div class="gallery-item" data-aos="zoom-in">
-                            <img src="./pics/2.jpg" alt="Community engagement">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand"></i>
-                            </div>
+            <!-- Gallery Content -->
+            <div class="tab-content" id="gallery">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
+                        <img src="./pics/2.jpg" alt="Community engagement" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
                         </div>
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                            <img src="./pics/3.jpg" alt="Project launch">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand"></i>
-                            </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
+                        <img src="./pics/3.jpg" alt="Project launch" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
                         </div>
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                            <img src="./pics/4.jpg" alt="Youth programs">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand"></i>
-                            </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
+                        <img src="./pics/4.jpg" alt="Youth programs" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
                         </div>
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                            <img src="./pics/5.jpg" alt="Assembly session">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand"></i>
-                            </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
+                        <img src="./pics/5.jpg" alt="Assembly session" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
                         </div>
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                            <img src="./pics/6.jpg" alt="Community meeting">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand"></i>
-                            </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
+                        <img src="./pics/6.jpg" alt="Community meeting" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
                         </div>
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
-                            <img src="./pics/44.jpg" alt="Development project">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand"></i>
-                            </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer">
+                        <img src="./pics/44.jpg" alt="Development project" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
                         </div>
                     </div>
                 </div>
-                
-                <div class="tab-content" id="videos">
-                    <div class="video-grid">
-                        <div class="video-item" data-aos="fade-up">
-                            <div class="video-thumbnail">
-                                <img src="./pics/55.jpg" alt="A Day with MCA Violet">
-                                <div class="play-btn">
-                                    <i class="fas fa-play"></i>
+            </div>
+            
+            <!-- Videos Content -->
+            <div class="tab-content hidden" id="videos">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    <div class="group bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-primary/50 transition-all duration-300">
+                        <div class="relative aspect-video">
+                            <img src="./pics/55.jpg" alt="A Day with MCA Violet" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                                <div class="w-16 h-16 bg-primary/90 rounded-full flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
+                                    <i class="fas fa-play text-white text-xl ml-1"></i>
                                 </div>
                             </div>
-                            <h3>A Day with MCA Violet Makhanu</h3>
-                            <p>Follow me through a typical day serving the people of Mihuu Ward.</p>
+                        </div>
+                        <div class="p-4 sm:p-6">
+                            <h3 class="text-lg font-bold mb-2 text-white">A Day with MCA Violet Makhanu</h3>
+                            <p class="text-gray-300 text-sm">Follow me through a typical day serving the people of Mihuu Ward.</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="tab-content" id="news">
-                    <div class="news-grid">
-                        <article class="news-item" data-aos="fade-up">
-                            <div class="news-date">Dec 15, 2024</div>
-                            <h3>New Borehole Project Launched in Mihuu</h3>
-                            <p>Another milestone in our commitment to providing clean water access to every family in Mihuu Ward.</p>
-                            <a href="#" class="read-more">Read More</a>
-                        </article>
-                        <article class="news-item" data-aos="fade-up" data-aos-delay="100">
-                            <div class="news-date">Dec 10, 2024</div>
-                            <h3>Youth Football Tournament Success</h3>
-                            <p>Over 200 young people participated in our annual football tournament, showcasing local talent.</p>
-                            <a href="#" class="read-more">Read More</a>
-                        </article>
-                    </div>
+            </div>
+            
+            <!-- News Content -->
+            <div class="tab-content hidden" id="news">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+                    <article class="bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-primary/50 transition-all duration-300">
+                        <div class="text-primary text-sm font-semibold mb-2">Dec 15, 2024</div>
+                        <h3 class="text-xl font-bold mb-3 text-white">New Borehole Project Launched in Mihuu</h3>
+                        <p class="text-gray-300 mb-4 leading-relaxed">Another milestone in our commitment to providing clean water access to every family in Mihuu Ward.</p>
+                        <a href="#" class="text-accent hover:text-white font-semibold transition-colors">Read More →</a>
+                    </article>
+                    <article class="bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-accent/50 transition-all duration-300">
+                        <div class="text-accent text-sm font-semibold mb-2">Dec 10, 2024</div>
+                        <h3 class="text-xl font-bold mb-3 text-white">Youth Football Tournament Success</h3>
+                        <p class="text-gray-300 mb-4 leading-relaxed">Over 200 young people participated in our annual football tournament, showcasing local talent.</p>
+                        <a href="#" class="text-primary hover:text-white font-semibold transition-colors">Read More →</a>
+                    </article>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title" translate-id="contact-title">Stay Connected</h2>
-                <p class="section-subtitle" translate-id="contact-subtitle">Your voice matters. I'm here to listen.</p>
+    <section class="py-16 sm:py-20 lg:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Stay Connected</h2>
+                <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">Your voice matters. I'm here to listen.</p>
             </div>
             
-            <div class="contact-content">
-                <div class="contact-info" data-aos="fade-right">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Contact Info -->
+                <div class="space-y-6 sm:space-y-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-map-marker-alt text-primary text-xl"></i>
                         </div>
-                        <div class="contact-details">
-                            <h3 translate-id="contact-office">Office Location</h3>
-                            <p>Mihuu Ward Offices<br>Bungoma County, Kenya</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3 translate-id="contact-phone">Phone</h3>
-                            <p>+254 700 000 000</p>
+                        <div>
+                            <h3 class="text-lg font-bold mb-2 text-white">Office Location</h3>
+                            <p class="text-gray-300">Mihuu Ward Offices<br>Bungoma County, Kenya</p>
                         </div>
                     </div>
                     
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-phone text-accent text-xl"></i>
                         </div>
-                        <div class="contact-details">
-                            <h3 translate-id="contact-email">Email</h3>
-                            <p>violet@mihuu.go.ke</p>
+                        <div>
+                            <h3 class="text-lg font-bold mb-2 text-white">Phone</h3>
+                            <p class="text-gray-300">+254 700 000 000</p>
                         </div>
                     </div>
                     
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-envelope text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-2 text-white">Email</h3>
+                            <p class="text-gray-300">violet@mihuu.go.ke</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="pt-6">
+                        <h3 class="text-lg font-bold mb-4 text-white">Follow Me</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-gray-700 hover:bg-primary rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
+                                <i class="fab fa-facebook text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-700 hover:bg-accent rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
+                                <i class="fab fa-twitter text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-700 hover:bg-primary rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
+                                <i class="fab fa-youtube text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-700 hover:bg-accent rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
+                                <i class="fab fa-tiktok text-white text-xl"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="contact-form" data-aos="fade-left">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" required>
-                            <label for="name" translate-id="form-name">Your Name</label>
+                <!-- Contact Form -->
+                <div class="bg-gray-700/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-gray-600">
+                    <form id="contactForm" class="space-y-6">
+                        <div class="relative">
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 sm:py-4 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-primary focus:outline-none transition-colors min-h-[44px]" placeholder="Your Name">
                         </div>
                         
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" required>
-                            <label for="email" translate-id="form-email">Email Address</label>
+                        <div class="relative">
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 sm:py-4 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-primary focus:outline-none transition-colors min-h-[44px]" placeholder="Email Address">
                         </div>
                         
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone">
-                            <label for="phone" translate-id="form-phone">Phone Number</label>
+                        <div class="relative">
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 sm:py-4 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-primary focus:outline-none transition-colors min-h-[44px]" placeholder="Phone Number">
                         </div>
                         
-                        <div class="form-group">
-                            <select id="subject" name="subject" required>
-                                <option value="" translate-id="form-subject">Select Subject</option>
+                        <div class="relative">
+                            <select id="subject" name="subject" required class="w-full px-4 py-3 sm:py-4 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-primary focus:outline-none transition-colors min-h-[44px]">
+                                <option value="">Select Subject</option>
                                 <option value="bursary">Bursary Application</option>
                                 <option value="project">Project Inquiry</option>
                                 <option value="volunteer">Volunteer Opportunity</option>
@@ -556,19 +600,18 @@
                             </select>
                         </div>
                         
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                            <label for="message" translate-id="form-message">Your Message</label>
+                        <div class="relative">
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 sm:py-4 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-primary focus:outline-none transition-colors resize-none" placeholder="Your Message"></textarea>
                         </div>
                         
-                        <div class="form-actions">
-                            <button type="button" class="btn btn-secondary" id="ai-assist">
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button type="button" class="flex-1 px-6 py-3 sm:py-4 bg-gray-600 hover:bg-gray-500 text-white font-semibold rounded-lg transition-all duration-300 hover:-translate-y-1 min-h-[44px] flex items-center justify-center space-x-2" id="ai-assist">
                                 <i class="fas fa-robot"></i>
-                                <span translate-id="btn-ai">AI Quick Answer</span>
+                                <span>AI Quick Answer</span>
                             </button>
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="flex-1 px-6 py-3 sm:py-4 bg-primary hover:bg-secondary text-white font-semibold rounded-lg transition-all duration-300 hover:-translate-y-1 min-h-[44px] flex items-center justify-center space-x-2">
                                 <i class="fas fa-paper-plane"></i>
-                                <span translate-id="btn-send">Send Message</span>
+                                <span>Send Message</span>
                             </button>
                         </div>
                     </form>
@@ -578,108 +621,195 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg" alt="Hon. Violet Makhanu">
+    <footer class="bg-gray-900 border-t border-gray-800 py-12 sm:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+                <!-- Logo Section -->
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="./pics/Mihuu-Ward-MCA-Mrs.-Violet-Makhanu-PHOTO-WEST-MEDIA.jpg" alt="Hon. Violet Makhanu" class="w-12 h-12 rounded-full object-cover">
                         <div>
-                            <h3>Hon. Violet Makhanu</h3>
-                            <p data-i18n="footer.tagline">Service • Impact • Leadership</p>
+                            <h3 class="text-lg font-bold text-white">Hon. Violet Makhanu</h3>
+                            <p class="text-gray-400 text-sm">Service • Impact • Leadership</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="footer-section">
-                    <h4 translate-id="footer-links">Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#achievements">Achievements</a></li>
-                        <li><a href="#vision">Vision 2027</a></li>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#achievements" class="text-gray-400 hover:text-white transition-colors">Achievements</a></li>
+                        <li><a href="#vision" class="text-gray-400 hover:text-white transition-colors">Vision 2027</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-section">
-                    <h4 translate-id="footer-involve">Get Involved</h4>
-                    <ul>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#media">Media</a></li>
-                        <li><a href="#volunteer">Volunteer</a></li>
-                        <li><a href="#events">Events</a></li>
+                <!-- Get Involved -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Get Involved</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#media" class="text-gray-400 hover:text-white transition-colors">Media</a></li>
+                        <li><a href="#volunteer" class="text-gray-400 hover:text-white transition-colors">Volunteer</a></li>
+                        <li><a href="#events" class="text-gray-400 hover:text-white transition-colors">Events</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-section">
-                    <h4 translate-id="footer-connect">Connect</h4>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                <!-- Connect -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
+                            <i class="fab fa-facebook text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-accent rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
+                            <i class="fab fa-youtube text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-accent rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
+                            <i class="fab fa-tiktok text-white"></i>
+                        </a>
                     </div>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p data-i18n="footer.copyright">&copy; 2024 Hon. Violet Makhanu. All rights reserved.</p>
-                <p data-i18n="footer.built">Built with ❤️ for the people of Mihuu Ward</p>
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400 text-sm mb-2">&copy; 2024 Hon. Violet Makhanu. All rights reserved.</p>
+                <p class="text-gray-500 text-sm">Built with ❤️ for the people of Mihuu Ward</p>
             </div>
         </div>
     </footer>
 
     <!-- AI Chat Assistant -->
-    <div class="ai-chat" id="ai-chat">
-        <div class="chat-header">
-            <div class="chat-avatar">
-                <i class="fas fa-robot"></i>
+    <div class="fixed bottom-4 right-4 w-80 max-w-[calc(100vw-2rem)] bg-gray-800/95 backdrop-blur-md rounded-2xl border border-gray-700 shadow-2xl transform translate-y-full transition-transform duration-300 z-50" id="ai-chat">
+        <div class="flex items-center justify-between p-4 border-b border-gray-700">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                    <i class="fas fa-robot text-white text-sm"></i>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm">Violet AI Assistant</h4>
+                    <span class="text-green-400 text-xs">Online</span>
+                </div>
             </div>
-            <div class="chat-info">
-                <h4 translate-id="chat-title">Violet AI Assistant</h4>
-                <span class="chat-status" translate-id="chat-status">Online</span>
-            </div>
-            <button class="chat-minimize" id="chat-minimize">
+            <button class="p-2 text-gray-400 hover:text-white hover:bg-gray-700 rounded-lg transition-all" id="chat-minimize">
                 <i class="fas fa-minus"></i>
             </button>
         </div>
         
-        <div class="chat-body" id="chat-body">
-            <div class="chat-message bot">
-                <div class="message-content">
-                    <p data-i18n="chat.welcome">Hello! I'm Violet's AI assistant. How can I help you learn more about Hon. Violet Makhanu and her work in Mihuu Ward?</p>
+        <div class="h-64 overflow-y-auto p-4 space-y-3" id="chat-body">
+            <div class="flex items-start space-x-2">
+                <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-robot text-white text-xs"></i>
+                </div>
+                <div class="bg-gray-700 rounded-lg p-3 max-w-[80%]">
+                    <p class="text-white text-sm">Hello! I'm Violet's AI assistant. How can I help you learn more about Hon. Violet Makhanu and her work in Mihuu Ward?</p>
                 </div>
             </div>
         </div>
         
-        <div class="chat-input">
-            <input type="text" id="chat-input" translate-id="chat-placeholder" placeholder="Ask me anything...">
-            <button id="chat-send"><i class="fas fa-paper-plane"></i></button>
-            <button id="chat-voice"><i class="fas fa-microphone"></i></button>
+        <div class="p-4 border-t border-gray-700">
+            <div class="flex space-x-2">
+                <input type="text" id="chat-input" placeholder="Ask me anything..." class="flex-1 px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-primary focus:outline-none text-sm min-h-[44px]">
+                <button id="chat-send" class="p-2 bg-primary hover:bg-secondary text-white rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+                <button id="chat-voice" class="p-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center">
+                    <i class="fas fa-microphone"></i>
+                </button>
+            </div>
         </div>
     </div>
 
     <!-- Chat Toggle Button -->
-    <button class="chat-toggle" id="chat-toggle">
-        <i class="fas fa-comments"></i>
+    <button class="fixed bottom-4 right-4 w-14 h-14 bg-primary hover:bg-secondary text-white rounded-full shadow-lg transition-all duration-300 hover:-translate-y-1 z-40 flex items-center justify-center" id="chat-toggle">
+        <i class="fas fa-comments text-xl"></i>
     </button>
 
     <!-- PWA Install Prompt -->
-    <div class="pwa-install" id="pwa-install">
-        <i class="fas fa-mobile-alt" style="font-size: 1.5rem;"></i>
-        <div style="flex: 1;">
-            <strong>Install App</strong><br>
-            <small>Add to home screen for better experience</small>
+    <div class="fixed bottom-4 left-4 right-4 bg-primary/95 backdrop-blur-md text-white p-4 rounded-xl shadow-2xl z-50 transform translate-y-full transition-transform duration-300" id="pwa-install">
+        <div class="flex items-center space-x-4">
+            <i class="fas fa-mobile-alt text-2xl flex-shrink-0"></i>
+            <div class="flex-1">
+                <div class="font-semibold">Install App</div>
+                <div class="text-sm opacity-90">Add to home screen for better experience</div>
+            </div>
+            <button id="pwa-install-btn" class="px-4 py-2 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors min-h-[44px]">
+                Install
+            </button>
+            <button class="p-2 text-white hover:bg-white/20 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center" id="pwa-close">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-        <button id="pwa-install-btn">Install</button>
-        <button class="pwa-close" id="pwa-close">&times;</button>
     </div>
 
     <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/particles.js"></script>
     <script src="./assets/js/ai-chat.js"></script>
     <script src="./assets/js/translate.js"></script>
     <script src="./assets/js/main.js"></script>
+    
+    <!-- Mobile Navigation Script -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const isOpen = !mobileMenu.classList.contains('-translate-y-full');
+            
+            if (isOpen) {
+                mobileMenu.classList.add('-translate-y-full');
+            } else {
+                mobileMenu.classList.remove('-translate-y-full');
+            }
+        });
+        
+        // Chat toggle
+        document.getElementById('chat-toggle').addEventListener('click', function() {
+            const chatBox = document.getElementById('ai-chat');
+            const isOpen = !chatBox.classList.contains('translate-y-full');
+            
+            if (isOpen) {
+                chatBox.classList.add('translate-y-full');
+            } else {
+                chatBox.classList.remove('translate-y-full');
+            }
+        });
+        
+        document.getElementById('chat-minimize').addEventListener('click', function() {
+            document.getElementById('ai-chat').classList.add('translate-y-full');
+        });
+        
+        // Media tabs
+        document.querySelectorAll('[data-tab]').forEach(button => {
+            button.addEventListener('click', function() {
+                const targetTab = this.getAttribute('data-tab');
+                
+                // Update button states
+                document.querySelectorAll('[data-tab]').forEach(btn => {
+                    btn.classList.remove('bg-primary', 'text-white');
+                    btn.classList.add('bg-gray-800', 'text-gray-300');
+                });
+                this.classList.remove('bg-gray-800', 'text-gray-300');
+                this.classList.add('bg-primary', 'text-white');
+                
+                // Update content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.add('hidden');
+                });
+                document.getElementById(targetTab).classList.remove('hidden');
+            });
+        });
+        
+        // Scroll progress
+        window.addEventListener('scroll', function() {
+            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.getElementById('scroll-progress').style.transform = `scaleX(${scrolled / 100})`;
+        });
+    </script>
 </body>
 </html>
