@@ -88,12 +88,12 @@ class VioletWebsite {
             });
         }
 
-        // Handle navigation links
+        // Handle navigation links - only for mobile menu closing
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 const href = link.getAttribute('href');
                 
-                // Only handle same-page links (starting with #)
+                // Only handle same-page anchor links (starting with #)
                 if (href && href.startsWith('#')) {
                     e.preventDefault();
                     const targetId = href.substring(1);
@@ -107,9 +107,9 @@ class VioletWebsite {
                         });
                     }
                 }
-                // For HTML files (.html), let browser handle normally
+                // For .html files, do nothing - let browser handle normally
 
-                // Close mobile menu for all links
+                // Close mobile menu for all clicks
                 if (navMenu && navMenu.classList.contains('active')) {
                     navMenu.classList.remove('active');
                     if (navToggle) navToggle.classList.remove('active');
