@@ -88,22 +88,27 @@ class VioletWebsite {
             });
         }
 
-        // Smooth scrolling for navigation links
+        // Handle navigation links
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId);
+                const href = link.getAttribute('href');
                 
-                if (targetSection) {
-                    const offsetTop = targetSection.offsetTop - 70; // Account for fixed navbar
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
+                // Only prevent default for same-page links (starting with #)
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = href.substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        const offsetTop = targetSection.offsetTop - 70; // Account for fixed navbar
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
                 }
 
-                // Close mobile menu
+                // Close mobile menu for all links
                 if (navMenu.classList.contains('active')) {
                     navMenu.classList.remove('active');
                     navToggle.classList.remove('active');
