@@ -16,6 +16,8 @@ class VioletWebsite {
         this.setupContactForm();
         this.setupVoiceSearch();
         this.setupParticles();
+        this.setupPWA();
+        this.setupMobileTheme();
     }
 
     setupEventListeners() {
@@ -82,11 +84,24 @@ class VioletWebsite {
 
         // Mobile menu toggle
         if (navToggle && navMenu) {
-            navToggle.addEventListener('click', () => {
+            navToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
                 navMenu.classList.toggle('active');
                 navToggle.classList.toggle('active');
+                document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
             });
         }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navMenu && navMenu.classList.contains('active') && 
+                !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
 
         // Handle navigation links - only for mobile menu closing
         navLinks.forEach(link => {
@@ -153,6 +168,7 @@ class VioletWebsite {
 
     setupThemeToggle() {
         const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
         const body = document.body;
         
         // Check for saved theme preference
@@ -162,26 +178,93 @@ class VioletWebsite {
             this.updateThemeIcon(savedTheme === 'light');
         }
 
+        const toggleTheme = () => {
+            body.classList.toggle('light-mode');
+            const isLight = body.classList.contains('light-mode');
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            this.updateThemeIcon(isLight);
+        };
+
         if (themeToggle) {
-            themeToggle.addEventListener('click', () => {
-                body.classList.toggle('light-mode');
-                const isLight = body.classList.contains('light-mode');
-                
-                // Save theme preference
-                localStorage.setItem('theme', isLight ? 'light' : 'dark');
-                this.updateThemeIcon(isLight);
+            themeToggle.addEventListener('click', toggleTheme);
+        }
+        if (themeToggleMobile) {
+            themeToggleMobile.addEventListener('click', toggleTheme);
+        }
+    }
+
+    setupMobileTheme() {
+        const languageToggle = document.getElementById('language-toggle-mobile');
+        if (languageToggle) {
+            languageToggle.addEventListener('click', () => {
+                const currentLang = languageToggle.textContent;
+                languageToggle.textContent = currentLang === 'EN' ? 'SW' : 'EN';
+                // Trigger translation if translate.js is loaded
+                if (window.toggleLanguage) {
+                    window.toggleLanguage();
+                }
             });
         }
     }
 
+    setupPWA() {
+        let deferredPrompt;
+        const pwaInstall = document.getElementById('pwa-install');
+        const pwaInstallBtn = document.getElementById('pwa-install-btn');
+        const pwaClose = document.getElementById('pwa-close');
+
+        // Listen for beforeinstallprompt event
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            
+            // Show install prompt after 3 seconds
+            setTimeout(() => {
+                if (pwaInstall) {
+                    pwaInstall.classList.add('show');
+                }
+            }, 3000);
+        });
+
+        // Handle install button click
+        if (pwaInstallBtn) {
+            pwaInstallBtn.addEventListener('click', async () => {
+                if (deferredPrompt) {
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    deferredPrompt = null;
+                    pwaInstall.classList.remove('show');
+                }
+            });
+        }
+
+        // Handle close button
+        if (pwaClose) {
+            pwaClose.addEventListener('click', () => {
+                pwaInstall.classList.remove('show');
+            });
+        }
+
+        // Hide prompt after app is installed
+        window.addEventListener('appinstalled', () => {
+            if (pwaInstall) {
+                pwaInstall.classList.remove('show');
+            }
+        });
+    }
+
     updateThemeIcon(isLight) {
         const themeToggle = document.getElementById('theme-toggle');
-        if (themeToggle) {
-            const icon = themeToggle.querySelector('i');
-            if (icon) {
-                icon.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+        
+        [themeToggle, themeToggleMobile].forEach(toggle => {
+            if (toggle) {
+                const icon = toggle.querySelector('i');
+                if (icon) {
+                    icon.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
+                }
             }
-        }
+        });
     }
 
     setupCounters() {
