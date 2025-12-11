@@ -296,8 +296,8 @@ Users can install the website as an app on their devices through the browser's i
 
 For technical support or questions about this website:
 
-- **Email**: info@ozoneitsystem.co.ke
-- **Phone**: +254 700 000 000
+- **Email**: info@ozone.co.ke
+- **Phone**: 0796530470
 - **Website**: https://ozoneitsystem.netlify.app
 
 ## 📄 License

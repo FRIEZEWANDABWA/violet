@@ -232,10 +232,10 @@ class AIChatAssistant {
             response = "We offer:\n🌐 Networking Solutions\n🔒 Security Systems\n📞 PBX & IPBX Systems\n🎥 Audio Visual Systems\n💻 ICT Supply & Installation\n🔗 Fiber Links Installation";
         }
         else if (this.containsAny(lowerMessage, ['contact', 'phone', 'email'])) {
-            response = "📞 Contact us:\nPhone: +254 700 000 000\nEmail: info@ozoneitsystem.co.ke\nLocation: Nairobi, Kenya";
+            response = "📞 Contact us:\nPhone: 0796530470\nEmail: info@ozone.co.ke\nLocation: Nairobi, Kenya";
         }
         else if (this.containsAny(lowerMessage, ['quote', 'price', 'cost'])) {
-            response = "For a quote, please contact us at +254 700 000 000 or email info@ozoneitsystem.co.ke with your requirements.";
+            response = "For a quote, please contact us at 0796530470 or email info@ozone.co.ke with your requirements.";
         }
         else {
             response = "I can help you with information about our services, contact details, or getting quotes. What would you like to know?";
